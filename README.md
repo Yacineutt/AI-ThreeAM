@@ -5,8 +5,6 @@
 <p align="center">8 battle-tested doctrines &nbsp;·&nbsp; 3 real post-mortems &nbsp;·&nbsp; zero dependencies</p>
 
 
-<p align="center"><img src="mascot-sentinel.svg" alt="Sentinel mascot" width="150"></p>
-<p align="center"><i>Meet <b>Sentinel</b> — the watch-bot that refuses to let your agent ship broken.</i></p>
 
 ---
 

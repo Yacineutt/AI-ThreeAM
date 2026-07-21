@@ -1,17 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
 <defs>
-  <radialGradient id="amb" cx="0.26" cy="0.46" r="0.72"><stop offset="0" stop-color="#241452"/><stop offset="0.42" stop-color="#0c0a24"/><stop offset="1" stop-color="#030409"/></radialGradient>
+  <radialGradient id="amb" cx="0.30" cy="0.46" r="0.76"><stop offset="0" stop-color="#1d1148"/><stop offset="0.44" stop-color="#0b0920"/><stop offset="1" stop-color="#030409"/></radialGradient>
   <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C4A6FF"/><stop offset="0.5" stop-color="#7C5CFF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
   <linearGradient id="txtg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.6" stop-color="#F2EEFF"/><stop offset="1" stop-color="#B69CFF"/></linearGradient>
-  <filter id="bL" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="30"/></filter>
+  <linearGradient id="nodeGloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.07"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+  <filter id="bL" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="34"/></filter>
   <filter id="bS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4.5"/></filter>
-  <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8B5CF6" stroke-opacity="0.06" stroke-width="1"/></pattern>
-  <radialGradient id="stage" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#7C5CFF" stop-opacity="0.20"/><stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/></radialGradient>
+  <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8B5CF6" stroke-opacity="0.055" stroke-width="1"/></pattern>
 </defs>
 <rect width="1280" height="640" fill="url(#amb)"/>
 <rect width="1280" height="640" fill="url(#mesh)"/>
-<ellipse cx="300" cy="330" rx="300" ry="290" fill="#7C5CFF" opacity="0.14" filter="url(#bL)"/>
-<ellipse cx="300" cy="350" rx="230" ry="220" fill="url(#stage)"/>
+<ellipse cx="320" cy="300" rx="330" ry="290" fill="#7C5CFF" opacity="0.11" filter="url(#bL)"/>
 
 <g transform="translate(1132,30) scale(0.6)"><rect x="-6" y="-6" width="132" height="132" rx="26" fill="#0a0a20" opacity="0.55"/>
   <defs>
@@ -97,152 +96,98 @@
 </g>
 <text x="1124" y="115" text-anchor="end" font-family="DejaVu Sans" font-weight="bold" font-size="18" fill="#B69CFF" letter-spacing="3">WEVIA</text>
 
-<!-- MASCOT centre-stage left, large -->
-<g transform="translate(126,124) scale(1.02)">
-<defs>
-  <!-- volumetric body: light from top-left -->
-  <radialGradient id="s_body" cx="0.34" cy="0.26" r="0.82">
-    <stop offset="0" stop-color="#B9A0FF"/><stop offset="0.42" stop-color="#8B6FFF"/>
-    <stop offset="0.78" stop-color="#6141D6"/><stop offset="1" stop-color="#3F2795"/>
-  </radialGradient>
-  <radialGradient id="s_head" cx="0.34" cy="0.24" r="0.8">
-    <stop offset="0" stop-color="#C6B1FF"/><stop offset="0.45" stop-color="#9377FF"/>
-    <stop offset="0.8" stop-color="#6845DE"/><stop offset="1" stop-color="#452B9E"/>
-  </radialGradient>
-  <linearGradient id="s_rim" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#E9DEFF" stop-opacity="0"/><stop offset="0.72" stop-color="#E9DEFF" stop-opacity="0"/>
-    <stop offset="1" stop-color="#DCC9FF" stop-opacity="0.85"/>
-  </linearGradient>
-  <radialGradient id="s_spec" cx="0.5" cy="0.5" r="0.5">
-    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/><stop offset="0.55" stop-color="#FFFFFF" stop-opacity="0.18"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
-  </radialGradient>
-  <radialGradient id="s_shadow" cx="0.5" cy="0.5" r="0.5">
-    <stop offset="0" stop-color="#1A0F3D" stop-opacity="0.55"/><stop offset="0.6" stop-color="#1A0F3D" stop-opacity="0.18"/><stop offset="1" stop-color="#1A0F3D" stop-opacity="0"/>
-  </radialGradient>
-  <!-- visor: glossy dark glass -->
-  <linearGradient id="s_visor" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#1B1442"/><stop offset="0.5" stop-color="#0C0824"/><stop offset="1" stop-color="#160F35"/>
-  </linearGradient>
-  <linearGradient id="s_gloss" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.30"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
-  </linearGradient>
-  <!-- shield: metallic emerald -->
-  <linearGradient id="s_shield" x1="0.15" y1="0" x2="0.9" y2="1">
-    <stop offset="0" stop-color="#7DF7CE"/><stop offset="0.35" stop-color="#34D399"/>
-    <stop offset="0.72" stop-color="#12A374"/><stop offset="1" stop-color="#0A6E52"/>
-  </linearGradient>
-  <linearGradient id="s_shieldGloss" x1="0" y1="0" x2="0.4" y2="1">
-    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
-  </linearGradient>
-  <radialGradient id="s_eye" cx="0.35" cy="0.3" r="0.75">
-    <stop offset="0" stop-color="#A5F3FC"/><stop offset="0.5" stop-color="#22D3EE"/><stop offset="1" stop-color="#0B8FA8"/>
-  </radialGradient>
-  <linearGradient id="s_leg" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#7355E6"/><stop offset="0.5" stop-color="#5B3FD0"/><stop offset="1" stop-color="#412A9E"/>
-  </linearGradient>
-</defs>
 
-<!-- contact shadow (soft, radial) -->
-<ellipse cx="170" cy="352" rx="92" ry="18" fill="url(#s_shadow)"/>
+<!-- ===== SCHEMA: agent -> gates -> production ===== -->
+<g font-family="DejaVu Sans">
+  <!-- AGENT node -->
+  <g transform="translate(60,290)">
+    <rect x="0" y="-52" width="118" height="104" rx="18" fill="#120e30" stroke="#8B5CF6" stroke-width="1.8"/>
+    <rect x="0" y="-52" width="118" height="104" rx="18" fill="url(#nodeGloss)"/>
+    <g transform="translate(59,-16)">
+      <rect x="-19" y="-15" width="38" height="30" rx="9" fill="none" stroke="#C4B5FD" stroke-width="2.2"/>
+      <circle cx="-8" cy="-3" r="3.4" fill="#22D3EE"/><circle cx="8" cy="-3" r="3.4" fill="#22D3EE"/>
+      <path d="M-7,7 L7,7" stroke="#C4B5FD" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M0,-15 L0,-24" stroke="#C4B5FD" stroke-width="2.2" stroke-linecap="round"/><circle cx="0" cy="-27" r="3" fill="#22D3EE"/>
+    </g>
+    <text x="59" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#EDE9FE">AI AGENT</text>
+    <text x="59" y="43" text-anchor="middle" font-size="10.5" fill="#7E86BB">wants to act</text>
+  </g>
 
-<!-- legs -->
-<g>
-  <rect x="126" y="300" width="30" height="42" rx="15" fill="url(#s_leg)"/>
-  <rect x="184" y="300" width="30" height="42" rx="15" fill="url(#s_leg)"/>
-  <ellipse cx="141" cy="343" rx="22" ry="10" fill="#2FBE8A"/><ellipse cx="141" cy="340" rx="20" ry="8" fill="#4FE0A8"/>
-  <ellipse cx="199" cy="343" rx="22" ry="10" fill="#2FBE8A"/><ellipse cx="199" cy="340" rx="20" ry="8" fill="#4FE0A8"/>
+  <!-- flow line agent -> gates -->
+  <path d="M178,290 L212,290" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="5 6"/>
+  <path d="M206,285 L214,290 L206,295 Z" fill="#A78BFA"/>
+
+  <!-- GATE COLUMN -->
+  <rect x="214" y="150" width="196" height="280" rx="20" fill="#0b0a22" stroke="#3B2E7E" stroke-width="1.4"/>
+  <text x="312" y="176" text-anchor="middle" font-size="11" fill="#8B7FD4" letter-spacing="2.4">DOCTRINE GATES</text>
+
+  <g>
+    <g transform="translate(232,204)">
+      <rect x="0" y="-16" width="160" height="34" rx="10" fill="#161240" stroke="#6D5BC4" stroke-width="1.2"/>
+      <circle cx="19" cy="1" r="8.5" fill="none" stroke="#34D399" stroke-width="2"/><path d="M15,1 L18,4.6 L23.5,-2.6" stroke="#34D399" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <text x="37" y="5.5" font-size="12" fill="#D8D2F5">Human validates</text>
+    </g>
+    <g transform="translate(232,250)">
+      <rect x="0" y="-16" width="160" height="34" rx="10" fill="#161240" stroke="#6D5BC4" stroke-width="1.2"/>
+      <circle cx="19" cy="1" r="8.5" fill="none" stroke="#34D399" stroke-width="2"/><path d="M15,1 L18,4.6 L23.5,-2.6" stroke="#34D399" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <text x="37" y="5.5" font-size="12" fill="#D8D2F5">Backup exists</text>
+    </g>
+    <g transform="translate(232,296)">
+      <rect x="0" y="-16" width="160" height="34" rx="10" fill="#161240" stroke="#6D5BC4" stroke-width="1.2"/>
+      <circle cx="19" cy="1" r="8.5" fill="none" stroke="#34D399" stroke-width="2"/><path d="M15,1 L18,4.6 L23.5,-2.6" stroke="#34D399" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <text x="37" y="5.5" font-size="12" fill="#D8D2F5">Sandbox passed</text>
+    </g>
+    <g transform="translate(232,342)">
+      <rect x="0" y="-16" width="160" height="34" rx="10" fill="#161240" stroke="#6D5BC4" stroke-width="1.2"/>
+      <circle cx="19" cy="1" r="8.5" fill="none" stroke="#34D399" stroke-width="2"/><path d="M15,1 L18,4.6 L23.5,-2.6" stroke="#34D399" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <text x="37" y="5.5" font-size="12" fill="#D8D2F5">State verified</text>
+    </g>
+    <g transform="translate(232,388)">
+      <rect x="0" y="-16" width="160" height="34" rx="10" fill="#2a1020" stroke="#B4436A" stroke-width="1.2"/>
+      <g stroke="#F43F5E" stroke-width="2.2" stroke-linecap="round"><path d="M14,-4 L24,6"/><path d="M24,-4 L14,6"/></g>
+      <text x="37" y="5.5" font-size="12" fill="#F9A8D4">Blast radius too wide</text>
+    </g>
+  </g>
+
+  <!-- allowed path out -->
+  <path d="M410,268 L470,268" stroke="#34D399" stroke-width="2.2"/>
+  <path d="M464,263 L472,268 L464,273 Z" fill="#34D399"/>
+  <text x="440" y="258" text-anchor="middle" font-size="10" fill="#5FCFA4">pass</text>
+
+  <!-- blocked path -->
+  <path d="M410,388 L470,388" stroke="#F43F5E" stroke-width="2.2" stroke-dasharray="5 5"/>
+  <g transform="translate(478,388)"><circle r="12" fill="#2a1020" stroke="#F43F5E" stroke-width="2"/><path d="M-5,-5 L5,5 M5,-5 L-5,5" stroke="#F43F5E" stroke-width="2.4" stroke-linecap="round"/></g>
+  <text x="478" y="416" text-anchor="middle" font-size="10" fill="#E4708F">halted</text>
+
+  <!-- PRODUCTION node -->
+  <g transform="translate(472,224)">
+    <rect x="0" y="-46" width="112" height="92" rx="16" fill="#07211a" stroke="#34D399" stroke-width="1.8"/>
+    <g transform="translate(56,-14)">
+      <ellipse cx="0" cy="-9" rx="21" ry="7" fill="none" stroke="#6EE7B7" stroke-width="2"/>
+      <path d="M-21,-9 L-21,9 A21,7 0 0 0 21,9 L21,-9" fill="none" stroke="#6EE7B7" stroke-width="2"/>
+      <ellipse cx="0" cy="0" rx="21" ry="7" fill="none" stroke="#6EE7B7" stroke-width="1.4" opacity="0.6"/>
+    </g>
+    <text x="56" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#D1FAE5">PRODUCTION</text>
+    <text x="56" y="37" text-anchor="middle" font-size="10" fill="#5A9E85">intact</text>
+  </g>
 </g>
 
-<!-- antenna -->
-<path d="M170,74 L170,44" stroke="#6845DE" stroke-width="6" stroke-linecap="round"/>
-<circle cx="170" cy="38" r="11" fill="#0F172A"/>
-<circle cx="170" cy="38" r="9" fill="url(#s_eye)"/>
-<circle cx="167" cy="35" r="3.4" fill="#F0FEFF" opacity="0.95"/>
-
-<!-- BODY -->
-<rect x="96" y="176" width="148" height="140" rx="52" fill="url(#s_body)"/>
-<rect x="96" y="176" width="148" height="140" rx="52" fill="url(#s_rim)"/>
-<ellipse cx="136" cy="206" rx="34" ry="20" fill="url(#s_spec)" opacity="0.55"/>
-
-<!-- chest plate: clean, readable, NO blur -->
-<rect x="126" y="216" width="88" height="62" rx="20" fill="url(#s_visor)" stroke="#4B3A94" stroke-width="2"/>
-<rect x="130" y="220" width="80" height="26" rx="14" fill="url(#s_gloss)"/>
-<!-- crisp lock glyph = "guarded" -->
-<g transform="translate(170,250)">
-  <rect x="-16" y="-4" width="32" height="24" rx="6" fill="#34D399"/>
-  <rect x="-16" y="-4" width="32" height="10" rx="5" fill="#6EE7B7" opacity="0.6"/>
-  <path d="M-9,-4 L-9,-12 A9,9 0 0 1 9,-12 L9,-4" fill="none" stroke="#6EE7B7" stroke-width="4.5" stroke-linecap="round"/>
-  <circle cx="0" cy="7" r="3.6" fill="#064E3B"/>
-</g>
-
-<!-- HEAD -->
-<rect x="88" y="74" width="164" height="118" rx="50" fill="url(#s_head)"/>
-<rect x="88" y="74" width="164" height="118" rx="50" fill="url(#s_rim)"/>
-<ellipse cx="130" cy="102" rx="38" ry="22" fill="url(#s_spec)"/>
-
-<!-- visor with two clean eyes -->
-<rect x="106" y="106" width="128" height="60" rx="30" fill="url(#s_visor)" stroke="#5B47A8" stroke-width="2"/>
-<rect x="112" y="111" width="116" height="22" rx="11" fill="url(#s_gloss)"/>
-<g>
-  <ellipse cx="143" cy="138" rx="17" ry="18" fill="url(#s_eye)"/>
-  <ellipse cx="197" cy="138" rx="17" ry="18" fill="url(#s_eye)"/>
-  <circle cx="138" cy="132" r="6" fill="#F0FEFF" opacity="0.95"/>
-  <circle cx="192" cy="132" r="6" fill="#F0FEFF" opacity="0.95"/>
-  <circle cx="149" cy="145" r="2.6" fill="#F0FEFF" opacity="0.55"/>
-  <circle cx="203" cy="145" r="2.6" fill="#F0FEFF" opacity="0.55"/>
-</g>
-<!-- cheeks -->
-<ellipse cx="104" cy="158" rx="12" ry="8" fill="#F0ABFC" opacity="0.35"/>
-<ellipse cx="236" cy="158" rx="12" ry="8" fill="#F0ABFC" opacity="0.35"/>
-
-<!-- LEFT ARM holding shield -->
-<path d="M100,214 Q64,224 58,254" fill="none" stroke="#6845DE" stroke-width="20" stroke-linecap="round"/>
-<path d="M100,214 Q64,224 58,254" fill="none" stroke="#8B6FFF" stroke-width="12" stroke-linecap="round" opacity="0.55"/>
-
-<!-- SHIELD: the guard identity, big and readable -->
-<g transform="translate(58,278)">
-  <path d="M0,-44 L40,-24 L40,20 L0,46 L-40,20 L-40,-24 Z" fill="url(#s_shield)"/>
-  <path d="M0,-44 L40,-24 L40,20 L0,46 L-40,20 L-40,-24 Z" fill="url(#s_shieldGloss)"/>
-  <path d="M0,-44 L40,-24 L40,20 L0,46 L-40,20 L-40,-24 Z" fill="none" stroke="#0A5F46" stroke-width="2.5"/>
-  <path d="M0,-36 L32,-20 L32,16 L0,38 L-32,16 L-32,-20 Z" fill="none" stroke="#D1FAE5" stroke-width="1.6" opacity="0.55"/>
-  <path d="M-17,2 L-4,16 L19,-14" fill="none" stroke="#04241B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M-17,2 L-4,16 L19,-14" fill="none" stroke="#ECFDF5" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-
-<!-- RIGHT ARM: raised STOP hand -->
-<path d="M240,214 Q276,206 282,178" fill="none" stroke="#6845DE" stroke-width="20" stroke-linecap="round"/>
-<path d="M240,214 Q276,206 282,178" fill="none" stroke="#8B6FFF" stroke-width="12" stroke-linecap="round" opacity="0.55"/>
-<g transform="translate(284,164)">
-  <rect x="-17" y="-20" width="34" height="38" rx="15" fill="url(#s_head)"/>
-  <rect x="-17" y="-20" width="34" height="38" rx="15" fill="url(#s_rim)"/>
-  <ellipse cx="-5" cy="-11" rx="9" ry="6" fill="url(#s_spec)" opacity="0.6"/>
-</g>
-</g>
-
-<!-- AI badge -->
-<g transform="translate(602,168)">
+<g transform="translate(700,168)">
   <rect x="0" y="-26" width="74" height="36" rx="18" fill="url(#neon)" opacity="0.22" filter="url(#bS)"/>
   <rect x="0" y="-26" width="74" height="36" rx="18" fill="none" stroke="url(#neon)" stroke-width="2"/>
   <text x="37" y="0" text-anchor="middle" font-family="DejaVu Sans" font-weight="bold" font-size="22" fill="#B69CFF" letter-spacing="3">AI</text>
-  <rect x="88" y="-11" width="52" height="2.5" rx="1.2" fill="url(#neon)" opacity="0.55"/>
+  <rect x="88" y="-11" width="46" height="2.5" rx="1.2" fill="url(#neon)" opacity="0.55"/>
 </g>
 <g font-family="DejaVu Sans" font-weight="bold">
-  <text x="600" y="280" font-size="100" fill="#7C5CFF" opacity="0.55" filter="url(#bL)">ThreeAM</text>
-  <text x="600" y="280" font-size="100" fill="#7C5CFF" opacity="0.45" filter="url(#bS)">ThreeAM</text>
-  <text x="600" y="280" font-size="100" fill="url(#txtg)">ThreeAM</text>
+  <text x="698" y="278" font-size="88" fill="#7C5CFF" opacity="0.5" filter="url(#bL)">ThreeAM</text>
+  <text x="698" y="278" font-size="88" fill="url(#txtg)">ThreeAM</text>
 </g>
-<rect x="602" y="308" width="140" height="5" rx="2.5" fill="url(#neon)" opacity="0.8" filter="url(#bS)"/>
-<rect x="602" y="308" width="140" height="5" rx="2.5" fill="url(#neon)"/>
+<rect x="700" y="306" width="128" height="5" rx="2.5" fill="url(#neon)"/>
 <g font-family="DejaVu Sans">
-  <text x="602" y="364" font-size="27" fill="#DDD6FE">Stop your AI agent from</text>
-  <text x="602" y="400" font-size="27" fill="#DDD6FE">breaking production at 3 a.m.</text>
-  <text x="602" y="454" font-size="18" fill="#8B93C7">8 doctrines &#183; 3 real post-mortems &#183; zero deps</text>
+  <text x="700" y="360" font-size="25" fill="#DDD6FE">Stop your AI agent from</text>
+  <text x="700" y="394" font-size="25" fill="#DDD6FE">breaking production at 3 a.m.</text>
+  <text x="700" y="446" font-size="17" fill="#8B93C7">8 doctrines &#183; 3 real post-mortems &#183; zero deps</text>
 </g>
-<g transform="translate(602,492)">
-  <circle cx="10" cy="-5" r="10" fill="#7C5CFF"/><path d="M4,-6 L9,-1 L17,-12" fill="none" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
-  <text x="30" y="0" font-family="DejaVu Sans" font-weight="bold" font-size="17" fill="#B69CFF">Sentinel</text>
-  <text x="118" y="0" font-family="DejaVu Sans" font-size="14" fill="#8B93C7">&#8212; your production watch-bot</text>
-</g>
-<g font-family="DejaVu Sans"><rect x="602" y="522" width="3" height="19" rx="1.5" fill="#7C5CFF"/><text x="618" y="537" font-size="15" fill="#8B93C7">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
+<g font-family="DejaVu Sans"><rect x="700" y="486" width="3" height="19" rx="1.5" fill="#7C5CFF"/><text x="716" y="501" font-size="15" fill="#8B93C7">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
 <rect x="1" y="1" width="1278" height="638" fill="none" stroke="#7C5CFF" stroke-opacity="0.18" stroke-width="2"/>
 </svg>
