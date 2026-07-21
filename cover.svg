@@ -8,8 +8,7 @@
   <filter id="bS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4.5"/></filter>
   <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8B5CF6" stroke-opacity="0.055" stroke-width="1"/></pattern>
 </defs>
-<rect width="1280" height="640" fill="url(#amb)"/>
-<rect width="1280" height="640" fill="url(#mesh)"/>
+<rect width="1280" height="640" fill="url(#amb)"/><rect width="1280" height="640" fill="url(#mesh)"/>
 <ellipse cx="330" cy="320" rx="340" ry="300" fill="#7C5CFF" opacity="0.10" filter="url(#bL)"/>
 <g transform="translate(1132,30) scale(0.6)"><rect x="-6" y="-6" width="132" height="132" rx="26" fill="#0a0a20" opacity="0.55"/>
   <defs>
@@ -94,7 +93,6 @@
         fill="#06b6d4" text-anchor="middle" letter-spacing="2" opacity="0.8">INTELLIGENCE</text>
 </g>
 <text x="1124" y="115" text-anchor="end" font-family="DejaVu Sans" font-weight="bold" font-size="18" fill="#B69CFF" letter-spacing="3">WEVIA</text>
-
 <g font-family="DejaVu Sans">
   <!-- AI AGENT -->
   <g transform="translate(38,320)">
@@ -172,22 +170,25 @@
   </g>
   <text x="538" y="482" text-anchor="middle" font-size="11" fill="#E4708F">halted</text>
 </g>
-<g transform="translate(720,192)">
+
+<g transform="translate(720,168)">
   <rect x="0" y="-26" width="74" height="36" rx="18" fill="url(#neon)" opacity="0.22" filter="url(#bS)"/>
   <rect x="0" y="-26" width="74" height="36" rx="18" fill="none" stroke="url(#neon)" stroke-width="2"/>
   <text x="37" y="0" text-anchor="middle" font-family="DejaVu Sans" font-weight="bold" font-size="22" fill="#B69CFF" letter-spacing="3">AI</text>
   <rect x="88" y="-11" width="46" height="2.5" rx="1.2" fill="url(#neon)" opacity="0.55"/>
 </g>
 <g font-family="DejaVu Sans" font-weight="bold">
-  <text x="718" y="300" font-size="86" fill="#7C5CFF" opacity="0.5" filter="url(#bL)">ThreeAM</text>
-  <text x="718" y="300" font-size="86" fill="url(#txtg)">ThreeAM</text>
+  <text x="718" y="272" font-size="86" fill="#7C5CFF" opacity="0.5" filter="url(#bL)">Agentic</text>
+  <text x="718" y="272" font-size="86" fill="url(#txtg)">Agentic</text>
+  <text x="718" y="356" font-size="86" fill="#7C5CFF" opacity="0.5" filter="url(#bL)">Safe</text>
+  <text x="718" y="356" font-size="86" fill="url(#txtg)">Safe</text>
 </g>
-<rect x="720" y="328" width="128" height="5" rx="2.5" fill="url(#neon)"/>
+<rect x="720" y="384" width="128" height="5" rx="2.5" fill="url(#neon)"/>
 <g font-family="DejaVu Sans">
-  <text x="720" y="382" font-size="25" fill="#DDD6FE">Stop your AI agent from</text>
-  <text x="720" y="416" font-size="25" fill="#DDD6FE">breaking production at 3 a.m.</text>
-  <text x="720" y="466" font-size="17" fill="#8B93C7">8 doctrines &#183; 3 real post-mortems &#183; zero deps</text>
+  <text x="720" y="434" font-size="24" fill="#DDD6FE">Stop your AI agent from</text>
+  <text x="720" y="466" font-size="24" fill="#DDD6FE">breaking production at 3 a.m.</text>
+  <text x="720" y="510" font-size="16.5" fill="#8B93C7">8 doctrines &#183; 3 real post-mortems &#183; zero deps</text>
 </g>
-<g font-family="DejaVu Sans"><rect x="720" y="500" width="3" height="19" rx="1.5" fill="#7C5CFF"/><text x="736" y="515" font-size="15" fill="#8B93C7">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
+<g font-family="DejaVu Sans"><rect x="720" y="540" width="3" height="18" rx="1.5" fill="#7C5CFF"/><text x="736" y="554" font-size="14.5" fill="#8B93C7">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
 <rect x="1" y="1" width="1278" height="638" fill="none" stroke="#7C5CFF" stroke-opacity="0.18" stroke-width="2"/>
 </svg>
