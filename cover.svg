@@ -1,45 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" font-family="'Segoe UI',system-ui,sans-serif">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0a0e1f"/><stop offset="0.55" stop-color="#0d1330"/><stop offset="1" stop-color="#131a3a"/>
-    </linearGradient>
-    <linearGradient id="gw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C5CFF"/><stop offset="1" stop-color="#1FB6FF"/></linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.5"><stop offset="0" stop-color="#7C5CFF" stop-opacity="0.32"/><stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/></radialGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/></pattern>
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
-  </defs>
-  <rect width="1280" height="640" fill="url(#bg)"/>
-  <rect width="1280" height="640" fill="url(#grid)"/>
-  <ellipse cx="470" cy="300" rx="360" ry="260" fill="url(#glow)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+<defs>
+  <radialGradient id="amb" cx="0.28" cy="0.48" r="0.68">
+    <stop offset="0" stop-color="#241452"/><stop offset="0.42" stop-color="#0c0a24"/><stop offset="1" stop-color="#030409"/>
+  </radialGradient>
+  <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#C4A6FF"/><stop offset="0.5" stop-color="#7C5CFF"/><stop offset="1" stop-color="#22D3EE"/>
+  </linearGradient>
+  <linearGradient id="txtg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/><stop offset="0.62" stop-color="#F2EEFF"/><stop offset="1" stop-color="#B69CFF"/>
+  </linearGradient>
+  <filter id="bL" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="30"/></filter>
+  <filter id="bM" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="12"/></filter>
+  <filter id="bS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4.5"/></filter>
+  <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse">
+    <path d="M48 0H0V48" fill="none" stroke="#8B5CF6" stroke-opacity="0.06" stroke-width="1"/>
+  </pattern>
+  <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+  </linearGradient>
+</defs>
 
-  <!-- shield hexagon lattice -->
-  <g transform="translate(470,300)">
-    <g fill="none" stroke="url(#gw)" stroke-opacity="0.85">
-      <path d="M0,-150 L130,-75 L130,75 L0,150 L-130,75 L-130,-75 Z" stroke-width="2.5"/>
-      <path d="M0,-96 L83,-48 L83,48 L0,96 L-83,48 L-83,-48 Z" stroke-width="1.6" stroke-opacity="0.55"/>
-    </g>
-    <!-- inner hex cells -->
-    <g fill="#7C5CFF" fill-opacity="0.10" stroke="#1FB6FF" stroke-opacity="0.4" stroke-width="1">
-      <path d="M0,-52 L45,-26 L45,26 L0,52 L-45,26 L-45,-26 Z"/>
-    </g>
-    <!-- checkmark core -->
-    <path d="M-26,4 L-6,26 L34,-22" fill="none" stroke="#37E0A6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)"/>
-    <path d="M-26,4 L-6,26 L34,-22" fill="none" stroke="#37E0A6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle r="185" fill="none" stroke="#7C5CFF" stroke-opacity="0.25" stroke-width="1"/>
+<rect width="1280" height="640" fill="url(#amb)"/>
+<rect width="1280" height="640" fill="url(#mesh)"/>
+<ellipse cx="330" cy="320" rx="340" ry="320" fill="#7C5CFF" opacity="0.16" filter="url(#bL)"/>
+<ellipse cx="335" cy="318" rx="130" ry="130" fill="#22D3EE" opacity="0.11" filter="url(#bL)"/>
+<rect x="640" y="0" width="640" height="640" fill="url(#fade)"/>
+
+<!-- threat traces from the left, halted at the shield -->
+<g stroke-linecap="round" fill="none">
+  <path d="M22,132 C120,178 168,232 200,262" stroke="#F43F5E" stroke-width="7" opacity="0.30" filter="url(#bM)"/>
+  <path d="M22,132 C120,178 168,232 200,262" stroke="#FDA4AF" stroke-width="1.8" opacity="0.85"/>
+  <path d="M16,512 C120,478 170,414 202,378" stroke="#F43F5E" stroke-width="7" opacity="0.28" filter="url(#bM)"/>
+  <path d="M16,512 C120,478 170,414 202,378" stroke="#FDA4AF" stroke-width="1.8" opacity="0.78"/>
+  <path d="M8,322 C90,322 150,321 206,320" stroke="#F43F5E" stroke-width="7" opacity="0.26" filter="url(#bM)"/>
+  <path d="M8,322 C90,322 150,321 206,320" stroke="#FDA4AF" stroke-width="1.7" opacity="0.72"/>
+  <path d="M20,232 C110,252 165,282 200,300" stroke="#F43F5E" stroke-width="6" opacity="0.22" filter="url(#bM)"/>
+  <path d="M20,232 C110,252 165,282 200,300" stroke="#FDA4AF" stroke-width="1.4" opacity="0.6"/>
+  <path d="M18,414 C110,398 165,362 200,342" stroke="#F43F5E" stroke-width="6" opacity="0.22" filter="url(#bM)"/>
+  <path d="M18,414 C110,398 165,362 200,342" stroke="#FDA4AF" stroke-width="1.4" opacity="0.6"/>
+</g>
+<!-- impact sparks on shield edge -->
+<g fill="#FFE4E6">
+  <circle cx="203" cy="264" r="9" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="203" cy="264" r="3.4"/>
+  <circle cx="205" cy="376" r="9" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="205" cy="376" r="3.4"/>
+  <circle cx="209" cy="320" r="10" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="209" cy="320" r="3.6"/>
+  <circle cx="203" cy="301" r="7" fill="#F43F5E" opacity="0.4" filter="url(#bM)"/><circle cx="203" cy="301" r="2.6"/>
+  <circle cx="203" cy="341" r="7" fill="#F43F5E" opacity="0.4" filter="url(#bM)"/><circle cx="203" cy="341" r="2.6"/>
+</g>
+
+<!-- SHIELD -->
+<g transform="translate(332,320)">
+  <path d="M0,-178 L154,-89 L154,89 L0,178 L-154,89 L-154,-89 Z" fill="none" stroke="#7C5CFF" stroke-width="20" opacity="0.55" filter="url(#bL)"/>
+  <path d="M0,-178 L154,-89 L154,89 L0,178 L-154,89 L-154,-89 Z" fill="none" stroke="url(#neon)" stroke-width="10" opacity="0.9" filter="url(#bM)"/>
+  <path d="M0,-178 L154,-89 L154,89 L0,178 L-154,89 L-154,-89 Z" fill="#080a1c" fill-opacity="0.72" stroke="url(#neon)" stroke-width="3.2"/>
+  <path d="M0,-178 L154,-89 L154,89 L0,178 L-154,89 L-154,-89 Z" fill="none" stroke="#F5F3FF" stroke-width="1.2" opacity="0.9"/>
+  <path d="M0,-118 L102,-59 L102,59 L0,118 L-102,59 L-102,-59 Z" fill="none" stroke="#22D3EE" stroke-width="1.5" opacity="0.4"/>
+  <path d="M0,-64 L55,-32 L55,32 L0,64 L-55,32 L-55,-32 Z" fill="#7C5CFF" fill-opacity="0.10" stroke="#A78BFA" stroke-width="1" opacity="0.5"/>
+  <g>
+    <path d="M-42,7 L-12,40 L46,-32" fill="none" stroke="#10B981" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" opacity="0.55" filter="url(#bL)"/>
+    <path d="M-42,7 L-12,40 L46,-32" fill="none" stroke="#34D399" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.92" filter="url(#bM)"/>
+    <path d="M-42,7 L-12,40 L46,-32" fill="none" stroke="#F0FDF9" stroke-width="6.8" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-
-  <!-- data streams flowing into shield -->
-  <g stroke-width="1.5" fill="none" opacity="0.6">
-    <path d="M60,120 C220,180 300,240 335,270" stroke="#1FB6FF" stroke-dasharray="5 8"/>
-    <path d="M60,520 C220,460 300,380 335,340" stroke="#1FB6FF" stroke-dasharray="5 8"/>
-    <path d="M80,320 C180,320 260,300 320,300" stroke="#37E0A6" stroke-dasharray="5 8"/>
+  <g fill="#67E8F9">
+    <circle cx="0" cy="-178" r="7.5" opacity="0.75" filter="url(#bM)"/><circle cx="0" cy="-178" r="3.4" fill="#F0FEFF"/>
+    <circle cx="154" cy="-89" r="6" opacity="0.7" filter="url(#bM)"/><circle cx="154" cy="-89" r="2.8" fill="#F0FEFF"/>
+    <circle cx="154" cy="89" r="6" opacity="0.7" filter="url(#bM)"/><circle cx="154" cy="89" r="2.8" fill="#F0FEFF"/>
+    <circle cx="0" cy="178" r="6" opacity="0.7" filter="url(#bM)"/><circle cx="0" cy="178" r="2.8" fill="#F0FEFF"/>
+    <circle cx="-154" cy="89" r="6" opacity="0.7" filter="url(#bM)"/><circle cx="-154" cy="89" r="2.8" fill="#F0FEFF"/>
+    <circle cx="-154" cy="-89" r="6" opacity="0.7" filter="url(#bM)"/><circle cx="-154" cy="-89" r="2.8" fill="#F0FEFF"/>
   </g>
-  <g fill="#1FB6FF"><circle cx="335" cy="270" r="3"/><circle cx="335" cy="340" r="3"/></g>
+</g>
 
-  <!-- text -->
-  <text x="770" y="270" fill="#EAF0FF" font-size="62" font-weight="800" letter-spacing="-1">Agent Ops</text>
-  <text x="770" y="342" fill="#EAF0FF" font-size="62" font-weight="800" letter-spacing="-1">Doctrines</text>
-  <rect x="772" y="372" width="120" height="4" rx="2" fill="url(#gw)"/>
-  <text x="772" y="412" fill="#9FB0D8" font-size="22" font-weight="400">Discipline for AI agents that touch production.</text>
-  <text x="772" y="474" fill="#5D6B92" font-size="17" font-family="'IBM Plex Mono',monospace">by Yacine Mahboub · Founder of WEVIA</text>
+<!-- WORDMARK  (84px, largeur mesuree 569px, x=620 -> fin 1189, marge 91) -->
+<g font-family="DejaVu Sans" font-weight="bold">
+  <text x="620" y="268" font-size="84" fill="#7C5CFF" opacity="0.6" filter="url(#bL)">AgentGuard</text>
+  <text x="620" y="268" font-size="84" fill="#8B5CF6" opacity="0.5" filter="url(#bS)">AgentGuard</text>
+  <text x="620" y="268" font-size="84" fill="url(#txtg)">AgentGuard</text>
+</g>
+<rect x="622" y="296" width="140" height="5" rx="2.5" fill="url(#neon)" opacity="0.8" filter="url(#bS)"/>
+<rect x="622" y="296" width="140" height="5" rx="2.5" fill="url(#neon)"/>
+
+<g font-family="DejaVu Sans">
+  <text x="622" y="356" font-size="28" fill="#DDD6FE">Stop your AI agent from</text>
+  <text x="622" y="394" font-size="28" fill="#DDD6FE">breaking production at 3 a.m.</text>
+  <text x="622" y="452" font-size="18" fill="#8B93C7">8 doctrines &#183; 3 post-mortems &#183; zero deps</text>
+</g>
+<g font-family="DejaVu Sans">
+  <rect x="622" y="486" width="3" height="20" rx="1.5" fill="#7C5CFF"/>
+  <text x="638" y="502" font-size="16" fill="#7E86BB">by Yacine Mahboub &#183; Founder of WEVIA</text>
+</g>
+<rect x="1" y="1" width="1278" height="638" fill="none" stroke="#7C5CFF" stroke-opacity="0.18" stroke-width="2"/>
 </svg>

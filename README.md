@@ -1,60 +1,58 @@
-<p align="center"><img src="cover.svg" alt="Agent Ops Doctrines" width="100%"></p>
+<p align="center"><img src="cover.svg" alt="AgentGuard" width="100%"></p>
 
-# Agent Ops Doctrines
+<h1 align="center">AgentGuard</h1>
+<p align="center"><b>Stop your AI agent from breaking production at 3 a.m.</b></p>
+<p align="center">8 battle-tested doctrines &nbsp;·&nbsp; 3 real post-mortems &nbsp;·&nbsp; zero dependencies</p>
 
-**A field-tested discipline framework for AI agents that touch production systems.**
+---
+
+## Why
+
+Every agent framework tells you how to make an agent *act*. Almost none tell you how to stop it from quietly destroying something while you sleep.
+
+These are not principles someone brainstormed. Each one was written the expensive way — after something broke in production, and we wrote down the rule that would have prevented it.
 
 Created by **Yacine Mahboub**, Founder of WEVIA.
 
----
+## The 8 doctrines
 
-## Why this exists
-
-Most agent frameworks tell you how to make an agent *act*. Almost none tell you how to stop it from quietly destroying something at 3 a.m.
-
-This repository is not a framework, a library, or a product. It is a set of **operational doctrines** — hard rules, refined through real incidents, that govern how an autonomous agent is allowed to operate on live infrastructure.
-
-They were written the expensive way: by running agents against production for months, and writing down the rule every time something broke.
-
-## Who this is for
-
-- Teams putting LLM agents in front of real systems (infrastructure, ERP, databases, CI/CD)
-- CTOs and engineering leads who need an answer to *"what stops it from doing something stupid?"*
-- Anyone who has watched an agent report success on work it never did
-
-## The doctrines
-
-| # | Doctrine | One-line rule |
+| # | Doctrine | The rule |
 |---|---|---|
 | 0 | **Separation of powers** | The human validates. The agent executes. Never the same actor. |
 | 1 | **Backup before mutation** | No modification without a restorable copy made first. |
-| 2 | **Zero regression** | A change that breaks an existing passing test is not a change, it is an incident. |
-| 3 | **Honesty over fluency** | Absent is absent. A missing result is reported as missing, never fabricated. |
-| 4 | **Sandbox before production** | Nothing reaches production that has not been validated in an isolated copy first. |
-| 5 | **Verify, do not assume** | A command that returned 0 is not proof the intent was achieved. Check the actual state. |
-| 6 | **Bounded blast radius** | Mass operations are forbidden by default. Small batches, each verified. |
-| 7 | **Repair, never delete** | When something is broken, fix it. Deleting an application is not a repair. |
+| 2 | **Zero regression** | A change that breaks a passing test is an incident, not a change. |
+| 3 | **Honesty over fluency** | Absent is absent. Never fabricate a result to keep the output tidy. |
+| 4 | **Sandbox before production** | Nothing ships that wasn't validated in an isolated copy. |
+| 5 | **Verify, don't assume** | Exit code 0 is not proof the intent was achieved. Read back the state. |
+| 6 | **Bounded blast radius** | Mass operations forbidden by default. Small batches, each verified. |
+| 7 | **Repair, never delete** | Deleting an application is not a repair. |
 
-Full text with rationale and failure modes: **[DOCTRINES.md](DOCTRINES.md)**
+Full text with rationale and failure modes → **[DOCTRINES.md](DOCTRINES.md)**
 
-## The part most people skip
+## Drop it into your agent
 
-Doctrines are worthless if nobody defines who writes them, who approves them, and what happens when one is violated. See **[GOVERNANCE.md](GOVERNANCE.md)**.
+Copy [`templates/operator-system-prompt.md`](templates/operator-system-prompt.md) into your system prompt. One file, no runtime, works with any model or framework.
 
-## Lessons from real incidents
+## The post-mortems
 
-Each doctrine exists because something broke. The anonymized post-mortems are in **[lessons/](lessons/)** — including the one where deleting a public repository did not remove the leaked credentials.
+Each doctrine exists because something broke. The anonymized write-ups are in **[lessons/](lessons/)**:
 
-## Using these
+- **[Deleting a public fork does not remove your secrets](lessons/01-deleting-a-public-fork-does-not-remove-your-secrets.md)** — a credential stayed publicly readable *after* the repository was deleted. Most people don't know this is possible.
+- **[The filter that restarted cleanly and threw everything away](lessons/02-the-filter-that-silently-discarded-everything.md)** — a config that validated, restarted green, and silently discarded every message it was meant to route.
+- **[The service was never broken, the check was](lessons/03-the-service-was-never-broken.md)** — two months of `unhealthy` on a perfectly healthy service, one restart away from a real outage.
 
-Copy them. Adapt them. Argue with them. They are deliberately written to be transposable to any stack, because none of them depend on a specific tool.
+## Governance
 
-If you adapt them, attribution is appreciated but not required.
+Rules nobody owns are suggestions. Who writes them, who approves them, and what happens when one is violated → **[GOVERNANCE.md](GOVERNANCE.md)**
+
+## Related
+
+**[Quorum](https://github.com/Yacineutt/Quorum)** — one prompt, every model, measured agreement. Doctrine 3 in executable form.
 
 ## License
 
-Apache-2.0 — see [LICENSE](LICENSE).
+Apache-2.0. Copy them, adapt them, argue with them.
 
 ---
 
-*Maintained by [WEVIA](https://weval-consulting.com) — sovereign AI platform engineering.*
+<p align="center"><sub>Maintained by <a href="https://weval-consulting.com">WEVIA</a> — sovereign AI platform engineering.</sub></p>
