@@ -1,93 +1,197 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
 <defs>
-  <radialGradient id="amb" cx="0.28" cy="0.48" r="0.68">
-    <stop offset="0" stop-color="#241452"/><stop offset="0.42" stop-color="#0c0a24"/><stop offset="1" stop-color="#030409"/>
-  </radialGradient>
-  <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#C4A6FF"/><stop offset="0.5" stop-color="#7C5CFF"/><stop offset="1" stop-color="#22D3EE"/>
-  </linearGradient>
-  <linearGradient id="txtg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#FFFFFF"/><stop offset="0.62" stop-color="#F2EEFF"/><stop offset="1" stop-color="#B69CFF"/>
-  </linearGradient>
+  <radialGradient id="amb" cx="0.24" cy="0.46" r="0.72"><stop offset="0" stop-color="#241452"/><stop offset="0.42" stop-color="#0c0a24"/><stop offset="1" stop-color="#030409"/></radialGradient>
+  <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C4A6FF"/><stop offset="0.5" stop-color="#7C5CFF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+  <linearGradient id="txtg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.62" stop-color="#F2EEFF"/><stop offset="1" stop-color="#B69CFF"/></linearGradient>
   <filter id="bL" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="30"/></filter>
   <filter id="bM" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="12"/></filter>
   <filter id="bS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4.5"/></filter>
-  <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse">
-    <path d="M48 0H0V48" fill="none" stroke="#8B5CF6" stroke-opacity="0.06" stroke-width="1"/>
-  </pattern>
-  <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.55"/>
-  </linearGradient>
+  <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8B5CF6" stroke-opacity="0.06" stroke-width="1"/></pattern>
 </defs>
-
 <rect width="1280" height="640" fill="url(#amb)"/>
 <rect width="1280" height="640" fill="url(#mesh)"/>
-<ellipse cx="330" cy="320" rx="340" ry="320" fill="#7C5CFF" opacity="0.16" filter="url(#bL)"/>
-<ellipse cx="335" cy="318" rx="130" ry="130" fill="#22D3EE" opacity="0.11" filter="url(#bL)"/>
-<rect x="640" y="0" width="640" height="640" fill="url(#fade)"/>
+<ellipse cx="300" cy="330" rx="300" ry="290" fill="#7C5CFF" opacity="0.15" filter="url(#bL)"/>
+<ellipse cx="300" cy="330" rx="115" ry="115" fill="#22D3EE" opacity="0.10" filter="url(#bL)"/>
 
-<!-- threat traces from the left, halted at the shield -->
+<!-- LOGO WEVIA top-right -->
+<g transform="translate(1132,30) scale(0.6)"><rect x="-6" y="-6" width="132" height="132" rx="26" fill="#0a0a20" opacity="0.55"/>
+  <defs>
+    <linearGradient id="wgl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="wgr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="wglow">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="120" height="120" rx="22" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+
+  <!-- LOBE GAUCHE -->
+  <path d="
+    M60,28
+    C56,24 48,22 41,25
+    C34,28 30,35 30,42
+    C27,44 25,49 27,54
+    C24,57 23,63 26,68
+    C29,73 35,75 40,73
+    C42,78 46,82 52,82
+    C57,82 60,79 60,79
+  " fill="none" stroke="url(#wgl)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#wglow)"/>
+
+  <!-- Sillons gauche -->
+  <path d="M44,28 C41,36 40,44 42,52" fill="none" stroke="#a78bfa" stroke-width="1.8" stroke-dasharray="3,3" stroke-linecap="round" opacity="0.8"/>
+  <path d="M35,40 C32,47 32,56 36,63" fill="none" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="2,4" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- LOBE DROIT -->
+  <path d="
+    M60,28
+    C64,24 72,22 79,25
+    C86,28 90,35 90,42
+    C93,44 95,49 93,54
+    C96,57 97,63 94,68
+    C91,73 85,75 80,73
+    C78,78 74,82 68,82
+    C63,82 60,79 60,79
+  " fill="none" stroke="url(#wgr)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#wglow)"/>
+
+  <!-- Sillons droite -->
+  <path d="M76,28 C79,36 80,44 78,52" fill="none" stroke="#67e8f9" stroke-width="1.8" stroke-dasharray="3,3" stroke-linecap="round" opacity="0.8"/>
+  <path d="M85,40 C88,47 88,56 84,63" fill="none" stroke="#06b6d4" stroke-width="1.4" stroke-dasharray="2,4" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- SILLON MÉDIAN -->
+  <line x1="60" y1="27" x2="60" y2="80" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.55"/>
+
+  <!-- NOEUDS SYNAPTIQUES gauche -->
+  <circle cx="40" cy="30" r="3.2" fill="#a78bfa" filter="url(#wglow)"/>
+  <circle cx="28" cy="52" r="2.8" fill="#7c3aed" filter="url(#wglow)"/>
+  <circle cx="38" cy="72" r="2.8" fill="#10b981" filter="url(#wglow)"/>
+
+  <!-- NOEUDS SYNAPTIQUES droite -->
+  <circle cx="80" cy="30" r="3.2" fill="#67e8f9" filter="url(#wglow)"/>
+  <circle cx="92" cy="52" r="2.8" fill="#06b6d4" filter="url(#wglow)"/>
+  <circle cx="82" cy="72" r="2.8" fill="#10b981" filter="url(#wglow)"/>
+
+  <!-- AXONES vers centre -->
+  <line x1="42" y1="32" x2="57" y2="50" stroke="#a78bfa" stroke-width="1.2" opacity="0.6"/>
+  <line x1="30" y1="52" x2="54" y2="53" stroke="#7c3aed" stroke-width="1.2" opacity="0.6"/>
+  <line x1="40" y1="70" x2="56" y2="57" stroke="#10b981" stroke-width="1.2" opacity="0.6"/>
+  <line x1="78" y1="32" x2="63" y2="50" stroke="#67e8f9" stroke-width="1.2" opacity="0.6"/>
+  <line x1="90" y1="52" x2="66" y2="53" stroke="#06b6d4" stroke-width="1.2" opacity="0.6"/>
+  <line x1="80" y1="70" x2="64" y2="57" stroke="#10b981" stroke-width="1.2" opacity="0.6"/>
+
+  <!-- NOEUD CENTRAL pulsant -->
+  <circle cx="60" cy="53" r="6.5" fill="url(#wgl)" filter="url(#wglow)"/>
+  <circle cx="60" cy="53" r="11" fill="none" stroke="url(#wgl)" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="60" cy="53" r="16" fill="none" stroke="url(#wgr)" stroke-width="0.8" opacity="0.45"/>
+
+  <!-- TEXTE WEVIA -->
+  <text x="60" y="97" font-family="Arial Black,Arial" font-weight="900" font-size="12"
+        fill="#7c3aed" text-anchor="middle" letter-spacing="3">WEVIA</text>
+  <text x="60" y="109" font-family="Arial,sans-serif" font-size="6.5"
+        fill="#06b6d4" text-anchor="middle" letter-spacing="2" opacity="0.8">INTELLIGENCE</text>
+</g>
+<text x="1124" y="115" text-anchor="end" font-family="DejaVu Sans" font-weight="bold" font-size="18" fill="#C4B5FD" letter-spacing="3">WEVIA</text>
+
+<!-- threat traces + shield (left) -->
 <g stroke-linecap="round" fill="none">
-  <path d="M22,132 C120,178 168,232 200,262" stroke="#F43F5E" stroke-width="7" opacity="0.30" filter="url(#bM)"/>
-  <path d="M22,132 C120,178 168,232 200,262" stroke="#FDA4AF" stroke-width="1.8" opacity="0.85"/>
-  <path d="M16,512 C120,478 170,414 202,378" stroke="#F43F5E" stroke-width="7" opacity="0.28" filter="url(#bM)"/>
-  <path d="M16,512 C120,478 170,414 202,378" stroke="#FDA4AF" stroke-width="1.8" opacity="0.78"/>
-  <path d="M8,322 C90,322 150,321 206,320" stroke="#F43F5E" stroke-width="7" opacity="0.26" filter="url(#bM)"/>
-  <path d="M8,322 C90,322 150,321 206,320" stroke="#FDA4AF" stroke-width="1.7" opacity="0.72"/>
-  <path d="M20,232 C110,252 165,282 200,300" stroke="#F43F5E" stroke-width="6" opacity="0.22" filter="url(#bM)"/>
-  <path d="M20,232 C110,252 165,282 200,300" stroke="#FDA4AF" stroke-width="1.4" opacity="0.6"/>
-  <path d="M18,414 C110,398 165,362 200,342" stroke="#F43F5E" stroke-width="6" opacity="0.22" filter="url(#bM)"/>
-  <path d="M18,414 C110,398 165,362 200,342" stroke="#FDA4AF" stroke-width="1.4" opacity="0.6"/>
+  <path d="M18,150 C110,196 156,248 188,278" stroke="#F43F5E" stroke-width="7" opacity="0.28" filter="url(#bM)"/><path d="M18,150 C110,196 156,248 188,278" stroke="#FDA4AF" stroke-width="1.8" opacity="0.8"/>
+  <path d="M14,510 C110,476 158,416 190,384" stroke="#F43F5E" stroke-width="7" opacity="0.26" filter="url(#bM)"/><path d="M14,510 C110,476 158,416 190,384" stroke="#FDA4AF" stroke-width="1.8" opacity="0.74"/>
+  <path d="M8,330 C82,330 140,329 194,328" stroke="#F43F5E" stroke-width="7" opacity="0.24" filter="url(#bM)"/><path d="M8,330 C82,330 140,329 194,328" stroke="#FDA4AF" stroke-width="1.6" opacity="0.68"/>
 </g>
-<!-- impact sparks on shield edge -->
-<g fill="#FFE4E6">
-  <circle cx="203" cy="264" r="9" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="203" cy="264" r="3.4"/>
-  <circle cx="205" cy="376" r="9" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="205" cy="376" r="3.4"/>
-  <circle cx="209" cy="320" r="10" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="209" cy="320" r="3.6"/>
-  <circle cx="203" cy="301" r="7" fill="#F43F5E" opacity="0.4" filter="url(#bM)"/><circle cx="203" cy="301" r="2.6"/>
-  <circle cx="203" cy="341" r="7" fill="#F43F5E" opacity="0.4" filter="url(#bM)"/><circle cx="203" cy="341" r="2.6"/>
+<g fill="#FFE4E6"><circle cx="191" cy="280" r="9" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="191" cy="280" r="3.2"/><circle cx="193" cy="384" r="9" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="193" cy="384" r="3.2"/><circle cx="197" cy="328" r="10" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="197" cy="328" r="3.4"/></g>
+
+<g transform="translate(310,330)">
+  <path d="M0,-160 L139,-80 L139,80 L0,160 L-139,80 L-139,-80 Z" fill="none" stroke="#7C5CFF" stroke-width="19" opacity="0.5" filter="url(#bL)"/>
+  <path d="M0,-160 L139,-80 L139,80 L0,160 L-139,80 L-139,-80 Z" fill="none" stroke="url(#neon)" stroke-width="9" opacity="0.9" filter="url(#bM)"/>
+  <path d="M0,-160 L139,-80 L139,80 L0,160 L-139,80 L-139,-80 Z" fill="#080a1c" fill-opacity="0.7" stroke="url(#neon)" stroke-width="3"/>
+  <path d="M0,-160 L139,-80 L139,80 L0,160 L-139,80 L-139,-80 Z" fill="none" stroke="#F5F3FF" stroke-width="1.1" opacity="0.9"/>
+  <g fill="#67E8F9"><circle cx="0" cy="-160" r="6.5" opacity="0.75" filter="url(#bM)"/><circle cx="0" cy="-160" r="3" fill="#F0FEFF"/><circle cx="139" cy="-80" r="5" opacity="0.7" filter="url(#bM)"/><circle cx="139" cy="-80" r="2.4" fill="#F0FEFF"/><circle cx="-139" cy="80" r="5" opacity="0.7" filter="url(#bM)"/><circle cx="-139" cy="80" r="2.4" fill="#F0FEFF"/></g>
+  <!-- MASCOT standing inside/over the shield center -->
+  <g transform="translate(-118,-150) scale(0.78)">
+<defs>
+  <linearGradient id="guard_body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8B6FFF"/><stop offset="1" stop-color="#6D4AE8"/></linearGradient>
+  <linearGradient id="guard_belly" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1440"/><stop offset="1" stop-color="#0f0b28"/></linearGradient>
+  <linearGradient id="guard_shield" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+  <radialGradient id="guard_cheek" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#F0ABFC" stop-opacity="0.9"/><stop offset="1" stop-color="#F0ABFC" stop-opacity="0"/></radialGradient>
+  <filter id="guard_soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4"/></filter>
+  <filter id="guard_dropg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+
+<!-- ground shadow -->
+<ellipse cx="150" cy="316" rx="86" ry="16" fill="#000" opacity="0.35"/>
+
+<!-- little legs -->
+<g fill="#5B3FD0"><rect x="112" y="278" width="26" height="34" rx="13"/><rect x="162" y="278" width="26" height="34" rx="13"/></g>
+<g fill="#34D399"><ellipse cx="125" cy="312" rx="18" ry="9"/><ellipse cx="175" cy="312" rx="18" ry="9"/></g>
+
+<!-- antenna with brain-spark -->
+<line x1="150" y1="60" x2="150" y2="34" stroke="#7C5CFF" stroke-width="4" stroke-linecap="round"/>
+<circle cx="150" cy="28" r="9" fill="#22D3EE" filter="url(#guard_dropg)"/>
+<circle cx="150" cy="28" r="4" fill="#ECFEFF"/>
+
+<!-- BODY rounded -->
+<rect x="72" y="70" width="156" height="180" rx="62" fill="url(#guard_body)"/>
+<rect x="72" y="70" width="156" height="180" rx="62" fill="none" stroke="#B8A5FF" stroke-width="2" opacity="0.5"/>
+
+<!-- belly screen with brain lobes (WEVIA DNA) -->
+<rect x="98" y="150" width="104" height="78" rx="26" fill="url(#guard_belly)" stroke="#3A2E70" stroke-width="2"/>
+<!-- two-lobe brain motif -->
+<path d="M150,168 C146,164 139,163 134,166 C129,169 127,174 128,179 C125,181 124,186 127,190 C130,194 136,194 139,191 C141,195 145,197 150,197" fill="none" stroke="#A78BFA" stroke-width="3" stroke-linecap="round" filter="url(#guard_soft)"/>
+<path d="M150,168 C154,164 161,163 166,166 C171,169 173,174 172,179 C175,181 176,186 173,190 C170,194 164,194 161,191 C159,195 155,197 150,197" fill="none" stroke="#67E8F9" stroke-width="3" stroke-linecap="round" filter="url(#guard_soft)"/>
+
+<!-- FACE -->
+<!-- big friendly eyes -->
+<g>
+  <ellipse cx="120" cy="120" rx="22" ry="24" fill="#0d0a24"/>
+  <ellipse cx="180" cy="120" rx="22" ry="24" fill="#0d0a24"/>
+  <circle cx="126" cy="114" r="8" fill="#22D3EE"/><circle cx="129" cy="111" r="3" fill="#fff"/>
+  <circle cx="186" cy="114" r="8" fill="#22D3EE"/><circle cx="189" cy="111" r="3" fill="#fff"/>
+</g>
+<!-- cheeks -->
+<circle cx="98" cy="140" r="14" fill="url(#guard_cheek)"/>
+<circle cx="202" cy="140" r="14" fill="url(#guard_cheek)"/>
+<!-- tiny smile -->
+<path d="M138,142 Q150,152 162,142" fill="none" stroke="#0d0a24" stroke-width="3.5" stroke-linecap="round"/>
+
+<!-- ARM holding shield -->
+<path d="M78,180 Q40,190 44,224" fill="none" stroke="url(#guard_body)" stroke-width="20" stroke-linecap="round"/>
+<!-- SHIELD (the guard identity) -->
+<g transform="translate(44,236)">
+  <path d="M0,-34 L30,-18 L30,16 L0,36 L-30,16 L-30,-18 Z" fill="url(#guard_shield)" filter="url(#guard_dropg)"/>
+  <path d="M0,-34 L30,-18 L30,16 L0,36 L-30,16 L-30,-18 Z" fill="none" stroke="#ECFDF5" stroke-width="2" opacity="0.8"/>
+  <path d="M-14,2 L-3,14 L15,-12" fill="none" stroke="#0d2a24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<!-- other arm -->
+<path d="M222,180 Q250,192 244,214" fill="none" stroke="url(#guard_body)" stroke-width="20" stroke-linecap="round"/>
+<circle cx="244" cy="216" r="12" fill="#34D399"/>
+</g>
 </g>
 
-<!-- SHIELD -->
-<g transform="translate(332,320)">
-  <path d="M0,-178 L154,-89 L154,89 L0,178 L-154,89 L-154,-89 Z" fill="none" stroke="#7C5CFF" stroke-width="20" opacity="0.55" filter="url(#bL)"/>
-  <path d="M0,-178 L154,-89 L154,89 L0,178 L-154,89 L-154,-89 Z" fill="none" stroke="url(#neon)" stroke-width="10" opacity="0.9" filter="url(#bM)"/>
-  <path d="M0,-178 L154,-89 L154,89 L0,178 L-154,89 L-154,-89 Z" fill="#080a1c" fill-opacity="0.72" stroke="url(#neon)" stroke-width="3.2"/>
-  <path d="M0,-178 L154,-89 L154,89 L0,178 L-154,89 L-154,-89 Z" fill="none" stroke="#F5F3FF" stroke-width="1.2" opacity="0.9"/>
-  <path d="M0,-118 L102,-59 L102,59 L0,118 L-102,59 L-102,-59 Z" fill="none" stroke="#22D3EE" stroke-width="1.5" opacity="0.4"/>
-  <path d="M0,-64 L55,-32 L55,32 L0,64 L-55,32 L-55,-32 Z" fill="#7C5CFF" fill-opacity="0.10" stroke="#A78BFA" stroke-width="1" opacity="0.5"/>
-  <g>
-    <path d="M-42,7 L-12,40 L46,-32" fill="none" stroke="#10B981" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" opacity="0.55" filter="url(#bL)"/>
-    <path d="M-42,7 L-12,40 L46,-32" fill="none" stroke="#34D399" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.92" filter="url(#bM)"/>
-    <path d="M-42,7 L-12,40 L46,-32" fill="none" stroke="#F0FDF9" stroke-width="6.8" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <g fill="#67E8F9">
-    <circle cx="0" cy="-178" r="7.5" opacity="0.75" filter="url(#bM)"/><circle cx="0" cy="-178" r="3.4" fill="#F0FEFF"/>
-    <circle cx="154" cy="-89" r="6" opacity="0.7" filter="url(#bM)"/><circle cx="154" cy="-89" r="2.8" fill="#F0FEFF"/>
-    <circle cx="154" cy="89" r="6" opacity="0.7" filter="url(#bM)"/><circle cx="154" cy="89" r="2.8" fill="#F0FEFF"/>
-    <circle cx="0" cy="178" r="6" opacity="0.7" filter="url(#bM)"/><circle cx="0" cy="178" r="2.8" fill="#F0FEFF"/>
-    <circle cx="-154" cy="89" r="6" opacity="0.7" filter="url(#bM)"/><circle cx="-154" cy="89" r="2.8" fill="#F0FEFF"/>
-    <circle cx="-154" cy="-89" r="6" opacity="0.7" filter="url(#bM)"/><circle cx="-154" cy="-89" r="2.8" fill="#F0FEFF"/>
-  </g>
-</g>
-
-<!-- WORDMARK  (84px, largeur mesuree 569px, x=620 -> fin 1189, marge 91) -->
+<!-- WORDMARK right -->
 <g font-family="DejaVu Sans" font-weight="bold">
-  <text x="620" y="268" font-size="84" fill="#7C5CFF" opacity="0.6" filter="url(#bL)">AgentGuard</text>
-  <text x="620" y="268" font-size="84" fill="#8B5CF6" opacity="0.5" filter="url(#bS)">AgentGuard</text>
-  <text x="620" y="268" font-size="84" fill="url(#txtg)">AgentGuard</text>
+  <text x="600" y="250" font-size="82" fill="#7C5CFF" opacity="0.6" filter="url(#bL)">AgentGuard</text>
+  <text x="600" y="250" font-size="82" fill="#8B5CF6" opacity="0.5" filter="url(#bS)">AgentGuard</text>
+  <text x="600" y="250" font-size="82" fill="url(#txtg)">AgentGuard</text>
 </g>
-<rect x="622" y="296" width="140" height="5" rx="2.5" fill="url(#neon)" opacity="0.8" filter="url(#bS)"/>
-<rect x="622" y="296" width="140" height="5" rx="2.5" fill="url(#neon)"/>
-
+<rect x="602" y="278" width="140" height="5" rx="2.5" fill="url(#neon)" opacity="0.8" filter="url(#bS)"/>
+<rect x="602" y="278" width="140" height="5" rx="2.5" fill="url(#neon)"/>
 <g font-family="DejaVu Sans">
-  <text x="622" y="356" font-size="28" fill="#DDD6FE">Stop your AI agent from</text>
-  <text x="622" y="394" font-size="28" fill="#DDD6FE">breaking production at 3 a.m.</text>
-  <text x="622" y="452" font-size="18" fill="#8B93C7">8 doctrines &#183; 3 post-mortems &#183; zero deps</text>
+  <text x="602" y="338" font-size="27" fill="#DDD6FE">Stop your AI agent from</text>
+  <text x="602" y="374" font-size="27" fill="#DDD6FE">breaking production at 3 a.m.</text>
+  <text x="602" y="430" font-size="18" fill="#8B93C7">8 doctrines &#183; 3 post-mortems &#183; zero deps</text>
 </g>
-<g font-family="DejaVu Sans">
-  <rect x="622" y="486" width="3" height="20" rx="1.5" fill="#7C5CFF"/>
-  <text x="638" y="502" font-size="16" fill="#7E86BB">by Yacine Mahboub &#183; Founder of WEVIA</text>
+<!-- mascot name chip under title -->
+<g transform="translate(602,468)">
+  <circle cx="10" cy="-5" r="10" fill="#8B6FFF"/><path d="M4,-6 L9,-1 L17,-12" fill="none" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="30" y="0" font-family="DejaVu Sans" font-weight="bold" font-size="17" fill="#B8A5FF">Sentinel</text>
+  <text x="118" y="0" font-family="DejaVu Sans" font-size="14" fill="#6D75A8">— your production watch-bot</text>
 </g>
+<g font-family="DejaVu Sans"><rect x="602" y="500" width="3" height="19" rx="1.5" fill="#7C5CFF"/><text x="618" y="515" font-size="15" fill="#7E86BB">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
 <rect x="1" y="1" width="1278" height="638" fill="none" stroke="#7C5CFF" stroke-opacity="0.18" stroke-width="2"/>
 </svg>
