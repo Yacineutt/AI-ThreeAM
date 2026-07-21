@@ -1,6 +1,6 @@
-<p align="center"><img src="cover.svg" alt="AI AgentGuard" width="100%"></p>
+<p align="center"><img src="cover.svg" alt="AI ThreeAM" width="100%"></p>
 
-<h1 align="center">AI AgentGuard</h1>
+<h1 align="center">AI ThreeAM</h1>
 <p align="center"><b>Stop your AI agent from breaking production at 3 a.m.</b></p>
 <p align="center">8 battle-tested doctrines &nbsp;·&nbsp; 3 real post-mortems &nbsp;·&nbsp; zero dependencies</p>
 

@@ -1,58 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 340" width="300" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 380" width="340" height="380">
 <defs>
-  <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8B6FFF"/><stop offset="1" stop-color="#6D4AE8"/></linearGradient>
-  <linearGradient id="belly" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1440"/><stop offset="1" stop-color="#0f0b28"/></linearGradient>
-  <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
-  <radialGradient id="cheek" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#F0ABFC" stop-opacity="0.9"/><stop offset="1" stop-color="#F0ABFC" stop-opacity="0"/></radialGradient>
-  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4"/></filter>
-  <filter id="dropg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <!-- volumetric body: light from top-left -->
+  <radialGradient id="s_body" cx="0.34" cy="0.26" r="0.82">
+    <stop offset="0" stop-color="#B9A0FF"/><stop offset="0.42" stop-color="#8B6FFF"/>
+    <stop offset="0.78" stop-color="#6141D6"/><stop offset="1" stop-color="#3F2795"/>
+  </radialGradient>
+  <radialGradient id="s_head" cx="0.34" cy="0.24" r="0.8">
+    <stop offset="0" stop-color="#C6B1FF"/><stop offset="0.45" stop-color="#9377FF"/>
+    <stop offset="0.8" stop-color="#6845DE"/><stop offset="1" stop-color="#452B9E"/>
+  </radialGradient>
+  <linearGradient id="s_rim" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#E9DEFF" stop-opacity="0"/><stop offset="0.72" stop-color="#E9DEFF" stop-opacity="0"/>
+    <stop offset="1" stop-color="#DCC9FF" stop-opacity="0.85"/>
+  </linearGradient>
+  <radialGradient id="s_spec" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/><stop offset="0.55" stop-color="#FFFFFF" stop-opacity="0.18"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="s_shadow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#1A0F3D" stop-opacity="0.55"/><stop offset="0.6" stop-color="#1A0F3D" stop-opacity="0.18"/><stop offset="1" stop-color="#1A0F3D" stop-opacity="0"/>
+  </radialGradient>
+  <!-- visor: glossy dark glass -->
+  <linearGradient id="s_visor" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1B1442"/><stop offset="0.5" stop-color="#0C0824"/><stop offset="1" stop-color="#160F35"/>
+  </linearGradient>
+  <linearGradient id="s_gloss" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.30"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
+  <!-- shield: metallic emerald -->
+  <linearGradient id="s_shield" x1="0.15" y1="0" x2="0.9" y2="1">
+    <stop offset="0" stop-color="#7DF7CE"/><stop offset="0.35" stop-color="#34D399"/>
+    <stop offset="0.72" stop-color="#12A374"/><stop offset="1" stop-color="#0A6E52"/>
+  </linearGradient>
+  <linearGradient id="s_shieldGloss" x1="0" y1="0" x2="0.4" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="s_eye" cx="0.35" cy="0.3" r="0.75">
+    <stop offset="0" stop-color="#A5F3FC"/><stop offset="0.5" stop-color="#22D3EE"/><stop offset="1" stop-color="#0B8FA8"/>
+  </radialGradient>
+  <linearGradient id="s_leg" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#7355E6"/><stop offset="0.5" stop-color="#5B3FD0"/><stop offset="1" stop-color="#412A9E"/>
+  </linearGradient>
 </defs>
 
-<!-- ground shadow -->
-<ellipse cx="150" cy="316" rx="86" ry="16" fill="#000" opacity="0.35"/>
+<!-- contact shadow (soft, radial) -->
+<ellipse cx="170" cy="352" rx="92" ry="18" fill="url(#s_shadow)"/>
 
-<!-- little legs -->
-<g fill="#5B3FD0"><rect x="112" y="278" width="26" height="34" rx="13"/><rect x="162" y="278" width="26" height="34" rx="13"/></g>
-<g fill="#34D399"><ellipse cx="125" cy="312" rx="18" ry="9"/><ellipse cx="175" cy="312" rx="18" ry="9"/></g>
-
-<!-- antenna with brain-spark -->
-<line x1="150" y1="60" x2="150" y2="34" stroke="#7C5CFF" stroke-width="4" stroke-linecap="round"/>
-<circle cx="150" cy="28" r="9" fill="#22D3EE" filter="url(#dropg)"/>
-<circle cx="150" cy="28" r="4" fill="#ECFEFF"/>
-
-<!-- BODY rounded -->
-<rect x="72" y="70" width="156" height="180" rx="62" fill="url(#body)"/>
-<rect x="72" y="70" width="156" height="180" rx="62" fill="none" stroke="#B8A5FF" stroke-width="2" opacity="0.5"/>
-
-<!-- belly screen with brain lobes (WEVIA DNA) -->
-<rect x="98" y="150" width="104" height="78" rx="26" fill="url(#belly)" stroke="#3A2E70" stroke-width="2"/>
-<!-- two-lobe brain motif -->
-<path d="M150,168 C146,164 139,163 134,166 C129,169 127,174 128,179 C125,181 124,186 127,190 C130,194 136,194 139,191 C141,195 145,197 150,197" fill="none" stroke="#A78BFA" stroke-width="3" stroke-linecap="round" filter="url(#soft)"/>
-<path d="M150,168 C154,164 161,163 166,166 C171,169 173,174 172,179 C175,181 176,186 173,190 C170,194 164,194 161,191 C159,195 155,197 150,197" fill="none" stroke="#67E8F9" stroke-width="3" stroke-linecap="round" filter="url(#soft)"/>
-
-<!-- FACE -->
-<!-- big friendly eyes -->
+<!-- legs -->
 <g>
-  <ellipse cx="120" cy="120" rx="22" ry="24" fill="#0d0a24"/>
-  <ellipse cx="180" cy="120" rx="22" ry="24" fill="#0d0a24"/>
-  <circle cx="126" cy="114" r="8" fill="#22D3EE"/><circle cx="129" cy="111" r="3" fill="#fff"/>
-  <circle cx="186" cy="114" r="8" fill="#22D3EE"/><circle cx="189" cy="111" r="3" fill="#fff"/>
+  <rect x="126" y="300" width="30" height="42" rx="15" fill="url(#s_leg)"/>
+  <rect x="184" y="300" width="30" height="42" rx="15" fill="url(#s_leg)"/>
+  <ellipse cx="141" cy="343" rx="22" ry="10" fill="#2FBE8A"/><ellipse cx="141" cy="340" rx="20" ry="8" fill="#4FE0A8"/>
+  <ellipse cx="199" cy="343" rx="22" ry="10" fill="#2FBE8A"/><ellipse cx="199" cy="340" rx="20" ry="8" fill="#4FE0A8"/>
+</g>
+
+<!-- antenna -->
+<path d="M170,74 L170,44" stroke="#6845DE" stroke-width="6" stroke-linecap="round"/>
+<circle cx="170" cy="38" r="11" fill="#0F172A"/>
+<circle cx="170" cy="38" r="9" fill="url(#s_eye)"/>
+<circle cx="167" cy="35" r="3.4" fill="#F0FEFF" opacity="0.95"/>
+
+<!-- BODY -->
+<rect x="96" y="176" width="148" height="140" rx="52" fill="url(#s_body)"/>
+<rect x="96" y="176" width="148" height="140" rx="52" fill="url(#s_rim)"/>
+<ellipse cx="136" cy="206" rx="34" ry="20" fill="url(#s_spec)" opacity="0.55"/>
+
+<!-- chest plate: clean, readable, NO blur -->
+<rect x="126" y="216" width="88" height="62" rx="20" fill="url(#s_visor)" stroke="#4B3A94" stroke-width="2"/>
+<rect x="130" y="220" width="80" height="26" rx="14" fill="url(#s_gloss)"/>
+<!-- crisp lock glyph = "guarded" -->
+<g transform="translate(170,250)">
+  <rect x="-16" y="-4" width="32" height="24" rx="6" fill="#34D399"/>
+  <rect x="-16" y="-4" width="32" height="10" rx="5" fill="#6EE7B7" opacity="0.6"/>
+  <path d="M-9,-4 L-9,-12 A9,9 0 0 1 9,-12 L9,-4" fill="none" stroke="#6EE7B7" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="0" cy="7" r="3.6" fill="#064E3B"/>
+</g>
+
+<!-- HEAD -->
+<rect x="88" y="74" width="164" height="118" rx="50" fill="url(#s_head)"/>
+<rect x="88" y="74" width="164" height="118" rx="50" fill="url(#s_rim)"/>
+<ellipse cx="130" cy="102" rx="38" ry="22" fill="url(#s_spec)"/>
+
+<!-- visor with two clean eyes -->
+<rect x="106" y="106" width="128" height="60" rx="30" fill="url(#s_visor)" stroke="#5B47A8" stroke-width="2"/>
+<rect x="112" y="111" width="116" height="22" rx="11" fill="url(#s_gloss)"/>
+<g>
+  <ellipse cx="143" cy="138" rx="17" ry="18" fill="url(#s_eye)"/>
+  <ellipse cx="197" cy="138" rx="17" ry="18" fill="url(#s_eye)"/>
+  <circle cx="138" cy="132" r="6" fill="#F0FEFF" opacity="0.95"/>
+  <circle cx="192" cy="132" r="6" fill="#F0FEFF" opacity="0.95"/>
+  <circle cx="149" cy="145" r="2.6" fill="#F0FEFF" opacity="0.55"/>
+  <circle cx="203" cy="145" r="2.6" fill="#F0FEFF" opacity="0.55"/>
 </g>
 <!-- cheeks -->
-<circle cx="98" cy="140" r="14" fill="url(#cheek)"/>
-<circle cx="202" cy="140" r="14" fill="url(#cheek)"/>
-<!-- tiny smile -->
-<path d="M138,142 Q150,152 162,142" fill="none" stroke="#0d0a24" stroke-width="3.5" stroke-linecap="round"/>
+<ellipse cx="104" cy="158" rx="12" ry="8" fill="#F0ABFC" opacity="0.35"/>
+<ellipse cx="236" cy="158" rx="12" ry="8" fill="#F0ABFC" opacity="0.35"/>
 
-<!-- ARM holding shield -->
-<path d="M78,180 Q40,190 44,224" fill="none" stroke="url(#body)" stroke-width="20" stroke-linecap="round"/>
-<!-- SHIELD (the guard identity) -->
-<g transform="translate(44,236)">
-  <path d="M0,-34 L30,-18 L30,16 L0,36 L-30,16 L-30,-18 Z" fill="url(#shield)" filter="url(#dropg)"/>
-  <path d="M0,-34 L30,-18 L30,16 L0,36 L-30,16 L-30,-18 Z" fill="none" stroke="#ECFDF5" stroke-width="2" opacity="0.8"/>
-  <path d="M-14,2 L-3,14 L15,-12" fill="none" stroke="#0d2a24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- LEFT ARM holding shield -->
+<path d="M100,214 Q64,224 58,254" fill="none" stroke="#6845DE" stroke-width="20" stroke-linecap="round"/>
+<path d="M100,214 Q64,224 58,254" fill="none" stroke="#8B6FFF" stroke-width="12" stroke-linecap="round" opacity="0.55"/>
+
+<!-- SHIELD: the guard identity, big and readable -->
+<g transform="translate(58,278)">
+  <path d="M0,-44 L40,-24 L40,20 L0,46 L-40,20 L-40,-24 Z" fill="url(#s_shield)"/>
+  <path d="M0,-44 L40,-24 L40,20 L0,46 L-40,20 L-40,-24 Z" fill="url(#s_shieldGloss)"/>
+  <path d="M0,-44 L40,-24 L40,20 L0,46 L-40,20 L-40,-24 Z" fill="none" stroke="#0A5F46" stroke-width="2.5"/>
+  <path d="M0,-36 L32,-20 L32,16 L0,38 L-32,16 L-32,-20 Z" fill="none" stroke="#D1FAE5" stroke-width="1.6" opacity="0.55"/>
+  <path d="M-17,2 L-4,16 L19,-14" fill="none" stroke="#04241B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M-17,2 L-4,16 L19,-14" fill="none" stroke="#ECFDF5" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<!-- other arm -->
-<path d="M222,180 Q250,192 244,214" fill="none" stroke="url(#body)" stroke-width="20" stroke-linecap="round"/>
-<circle cx="244" cy="216" r="12" fill="#34D399"/>
+
+<!-- RIGHT ARM: raised STOP hand -->
+<path d="M240,214 Q276,206 282,178" fill="none" stroke="#6845DE" stroke-width="20" stroke-linecap="round"/>
+<path d="M240,214 Q276,206 282,178" fill="none" stroke="#8B6FFF" stroke-width="12" stroke-linecap="round" opacity="0.55"/>
+<g transform="translate(284,164)">
+  <rect x="-17" y="-20" width="34" height="38" rx="15" fill="url(#s_head)"/>
+  <rect x="-17" y="-20" width="34" height="38" rx="15" fill="url(#s_rim)"/>
+  <ellipse cx="-5" cy="-11" rx="9" ry="6" fill="url(#s_spec)" opacity="0.6"/>
+</g>
 </svg>
