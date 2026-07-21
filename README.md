@@ -1,3 +1,5 @@
+<p align="center"><img src="cover.svg" alt="Agent Ops Doctrines" width="100%"></p>
+
 # Agent Ops Doctrines
 
 **A field-tested discipline framework for AI agents that touch production systems.**
