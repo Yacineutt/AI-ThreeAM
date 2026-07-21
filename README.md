@@ -1,6 +1,6 @@
-<p align="center"><img src="cover.svg" alt="AgentGuard" width="100%"></p>
+<p align="center"><img src="cover.svg" alt="AI AgentGuard" width="100%"></p>
 
-<h1 align="center">AgentGuard</h1>
+<h1 align="center">AI AgentGuard</h1>
 <p align="center"><b>Stop your AI agent from breaking production at 3 a.m.</b></p>
 <p align="center">8 battle-tested doctrines &nbsp;·&nbsp; 3 real post-mortems &nbsp;·&nbsp; zero dependencies</p>
 
@@ -51,7 +51,7 @@ Rules nobody owns are suggestions. Who writes them, who approves them, and what 
 
 ## Related
 
-**[Quorum](https://github.com/Yacineutt/Quorum)** — one prompt, every model, measured agreement. Doctrine 3 in executable form.
+**[AI Quorum](https://github.com/Yacineutt/AI-Quorum)** — one prompt, every model, measured agreement. Doctrine 3 in executable form.
 
 ## License
 

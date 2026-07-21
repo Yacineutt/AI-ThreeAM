@@ -2,7 +2,7 @@
 <defs>
   <radialGradient id="amb" cx="0.24" cy="0.46" r="0.72"><stop offset="0" stop-color="#241452"/><stop offset="0.42" stop-color="#0c0a24"/><stop offset="1" stop-color="#030409"/></radialGradient>
   <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C4A6FF"/><stop offset="0.5" stop-color="#7C5CFF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
-  <linearGradient id="txtg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.62" stop-color="#F2EEFF"/><stop offset="1" stop-color="#B69CFF"/></linearGradient>
+  <linearGradient id="txtg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.6" stop-color="#F2EEFF"/><stop offset="1" stop-color="#B69CFF"/></linearGradient>
   <filter id="bL" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="30"/></filter>
   <filter id="bM" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="12"/></filter>
   <filter id="bS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4.5"/></filter>
@@ -11,9 +11,8 @@
 <rect width="1280" height="640" fill="url(#amb)"/>
 <rect width="1280" height="640" fill="url(#mesh)"/>
 <ellipse cx="300" cy="330" rx="300" ry="290" fill="#7C5CFF" opacity="0.15" filter="url(#bL)"/>
-<ellipse cx="300" cy="330" rx="115" ry="115" fill="#22D3EE" opacity="0.10" filter="url(#bL)"/>
+<ellipse cx="300" cy="330" rx="118" ry="118" fill="#22D3EE" opacity="0.11" filter="url(#bL)"/>
 
-<!-- LOGO WEVIA top-right -->
 <g transform="translate(1132,30) scale(0.6)"><rect x="-6" y="-6" width="132" height="132" rx="26" fill="#0a0a20" opacity="0.55"/>
   <defs>
     <linearGradient id="wgl" x1="0" y1="0" x2="0" y2="1">
@@ -96,23 +95,19 @@
   <text x="60" y="109" font-family="Arial,sans-serif" font-size="6.5"
         fill="#06b6d4" text-anchor="middle" letter-spacing="2" opacity="0.8">INTELLIGENCE</text>
 </g>
-<text x="1124" y="115" text-anchor="end" font-family="DejaVu Sans" font-weight="bold" font-size="18" fill="#C4B5FD" letter-spacing="3">WEVIA</text>
+<text x="1124" y="115" text-anchor="end" font-family="DejaVu Sans" font-weight="bold" font-size="18" fill="#B69CFF" letter-spacing="3">WEVIA</text>
 
-<!-- threat traces + shield (left) -->
 <g stroke-linecap="round" fill="none">
   <path d="M18,150 C110,196 156,248 188,278" stroke="#F43F5E" stroke-width="7" opacity="0.28" filter="url(#bM)"/><path d="M18,150 C110,196 156,248 188,278" stroke="#FDA4AF" stroke-width="1.8" opacity="0.8"/>
   <path d="M14,510 C110,476 158,416 190,384" stroke="#F43F5E" stroke-width="7" opacity="0.26" filter="url(#bM)"/><path d="M14,510 C110,476 158,416 190,384" stroke="#FDA4AF" stroke-width="1.8" opacity="0.74"/>
-  <path d="M8,330 C82,330 140,329 194,328" stroke="#F43F5E" stroke-width="7" opacity="0.24" filter="url(#bM)"/><path d="M8,330 C82,330 140,329 194,328" stroke="#FDA4AF" stroke-width="1.6" opacity="0.68"/>
-</g>
+  <path d="M8,330 C82,330 140,329 194,328" stroke="#F43F5E" stroke-width="7" opacity="0.24" filter="url(#bM)"/><path d="M8,330 C82,330 140,329 194,328" stroke="#FDA4AF" stroke-width="1.6" opacity="0.68"/></g>
 <g fill="#FFE4E6"><circle cx="191" cy="280" r="9" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="191" cy="280" r="3.2"/><circle cx="193" cy="384" r="9" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="193" cy="384" r="3.2"/><circle cx="197" cy="328" r="10" fill="#F43F5E" opacity="0.5" filter="url(#bM)"/><circle cx="197" cy="328" r="3.4"/></g>
-
 <g transform="translate(310,330)">
   <path d="M0,-160 L139,-80 L139,80 L0,160 L-139,80 L-139,-80 Z" fill="none" stroke="#7C5CFF" stroke-width="19" opacity="0.5" filter="url(#bL)"/>
   <path d="M0,-160 L139,-80 L139,80 L0,160 L-139,80 L-139,-80 Z" fill="none" stroke="url(#neon)" stroke-width="9" opacity="0.9" filter="url(#bM)"/>
   <path d="M0,-160 L139,-80 L139,80 L0,160 L-139,80 L-139,-80 Z" fill="#080a1c" fill-opacity="0.7" stroke="url(#neon)" stroke-width="3"/>
   <path d="M0,-160 L139,-80 L139,80 L0,160 L-139,80 L-139,-80 Z" fill="none" stroke="#F5F3FF" stroke-width="1.1" opacity="0.9"/>
   <g fill="#67E8F9"><circle cx="0" cy="-160" r="6.5" opacity="0.75" filter="url(#bM)"/><circle cx="0" cy="-160" r="3" fill="#F0FEFF"/><circle cx="139" cy="-80" r="5" opacity="0.7" filter="url(#bM)"/><circle cx="139" cy="-80" r="2.4" fill="#F0FEFF"/><circle cx="-139" cy="80" r="5" opacity="0.7" filter="url(#bM)"/><circle cx="-139" cy="80" r="2.4" fill="#F0FEFF"/></g>
-  <!-- MASCOT standing inside/over the shield center -->
   <g transform="translate(-118,-150) scale(0.78)">
 <defs>
   <linearGradient id="guard_body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8B6FFF"/><stop offset="1" stop-color="#6D4AE8"/></linearGradient>
@@ -170,28 +165,33 @@
 <!-- other arm -->
 <path d="M222,180 Q250,192 244,214" fill="none" stroke="url(#guard_body)" stroke-width="20" stroke-linecap="round"/>
 <circle cx="244" cy="216" r="12" fill="#34D399"/>
-</g>
+</g></g>
+
+<!-- AI badge -->
+<g transform="translate(602,170)">
+  <rect x="0" y="-26" width="74" height="36" rx="18" fill="url(#neon)" opacity="0.22" filter="url(#bS)"/>
+  <rect x="0" y="-26" width="74" height="36" rx="18" fill="none" stroke="url(#neon)" stroke-width="2"/>
+  <text x="37" y="0" text-anchor="middle" font-family="DejaVu Sans" font-weight="bold" font-size="22" fill="#B69CFF" letter-spacing="3">AI</text>
+  <rect x="88" y="-11" width="52" height="2.5" rx="1.2" fill="url(#neon)" opacity="0.55"/>
 </g>
 
-<!-- WORDMARK right -->
 <g font-family="DejaVu Sans" font-weight="bold">
-  <text x="600" y="250" font-size="82" fill="#7C5CFF" opacity="0.6" filter="url(#bL)">AgentGuard</text>
-  <text x="600" y="250" font-size="82" fill="#8B5CF6" opacity="0.5" filter="url(#bS)">AgentGuard</text>
-  <text x="600" y="250" font-size="82" fill="url(#txtg)">AgentGuard</text>
+  <text x="600" y="278" font-size="82" fill="#7C5CFF" opacity="0.6" filter="url(#bL)">AgentGuard</text>
+  <text x="600" y="278" font-size="82" fill="#7C5CFF" opacity="0.5" filter="url(#bS)">AgentGuard</text>
+  <text x="600" y="278" font-size="82" fill="url(#txtg)">AgentGuard</text>
 </g>
-<rect x="602" y="278" width="140" height="5" rx="2.5" fill="url(#neon)" opacity="0.8" filter="url(#bS)"/>
-<rect x="602" y="278" width="140" height="5" rx="2.5" fill="url(#neon)"/>
+<rect x="602" y="306" width="140" height="5" rx="2.5" fill="url(#neon)" opacity="0.8" filter="url(#bS)"/>
+<rect x="602" y="306" width="140" height="5" rx="2.5" fill="url(#neon)"/>
 <g font-family="DejaVu Sans">
-  <text x="602" y="338" font-size="27" fill="#DDD6FE">Stop your AI agent from</text>
-  <text x="602" y="374" font-size="27" fill="#DDD6FE">breaking production at 3 a.m.</text>
-  <text x="602" y="430" font-size="18" fill="#8B93C7">8 doctrines &#183; 3 post-mortems &#183; zero deps</text>
+  <text x="602" y="362" font-size="27" fill="#DDD6FE">Stop your AI agent from</text>
+  <text x="602" y="398" font-size="27" fill="#DDD6FE">breaking production at 3 a.m.</text>
+  <text x="602" y="452" font-size="18" fill="#8B93C7">8 doctrines &#183; 3 post-mortems &#183; zero deps</text>
 </g>
-<!-- mascot name chip under title -->
-<g transform="translate(602,468)">
-  <circle cx="10" cy="-5" r="10" fill="#8B6FFF"/><path d="M4,-6 L9,-1 L17,-12" fill="none" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
-  <text x="30" y="0" font-family="DejaVu Sans" font-weight="bold" font-size="17" fill="#B8A5FF">Sentinel</text>
-  <text x="118" y="0" font-family="DejaVu Sans" font-size="14" fill="#6D75A8">— your production watch-bot</text>
+<g transform="translate(602,490)">
+  <circle cx="10" cy="-5" r="10" fill="#7C5CFF"/><path d="M4,-6 L9,-1 L17,-12" fill="none" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="30" y="0" font-family="DejaVu Sans" font-weight="bold" font-size="17" fill="#B69CFF">Sentinel</text>
+  <text x="118" y="0" font-family="DejaVu Sans" font-size="14" fill="#8B93C7">&#8212; your production watch-bot</text>
 </g>
-<g font-family="DejaVu Sans"><rect x="602" y="500" width="3" height="19" rx="1.5" fill="#7C5CFF"/><text x="618" y="515" font-size="15" fill="#7E86BB">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
+<g font-family="DejaVu Sans"><rect x="602" y="520" width="3" height="19" rx="1.5" fill="#7C5CFF"/><text x="618" y="535" font-size="15" fill="#8B93C7">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
 <rect x="1" y="1" width="1278" height="638" fill="none" stroke="#7C5CFF" stroke-opacity="0.18" stroke-width="2"/>
 </svg>
