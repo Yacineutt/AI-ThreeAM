@@ -9,7 +9,7 @@
   <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8B5CF6" stroke-opacity="0.055" stroke-width="1"/></pattern>
 </defs>
 <rect width="1280" height="640" fill="url(#amb)"/><rect width="1280" height="640" fill="url(#mesh)"/>
-<ellipse cx="330" cy="320" rx="340" ry="300" fill="#7C5CFF" opacity="0.10" filter="url(#bL)"/>
+<ellipse cx="340" cy="320" rx="350" ry="290" fill="#7C5CFF" opacity="0.10" filter="url(#bL)"/>
 <g transform="translate(1132,30) scale(0.6)"><rect x="-6" y="-6" width="132" height="132" rx="26" fill="#0a0a20" opacity="0.55"/>
   <defs>
     <linearGradient id="wgl" x1="0" y1="0" x2="0" y2="1">
@@ -93,84 +93,90 @@
         fill="#06b6d4" text-anchor="middle" letter-spacing="2" opacity="0.8">INTELLIGENCE</text>
 </g>
 <text x="1124" y="115" text-anchor="end" font-family="DejaVu Sans" font-weight="bold" font-size="18" fill="#B69CFF" letter-spacing="3">WEVIA</text>
+
 <g font-family="DejaVu Sans">
-  <!-- AI AGENT -->
-  <g transform="translate(38,320)">
-    <rect x="0" y="-62" width="128" height="124" rx="20" fill="#130f33" stroke="#8B5CF6" stroke-width="1.8"/>
-    <rect x="0" y="-62" width="128" height="124" rx="20" fill="url(#nodeGloss)"/>
-    <g transform="translate(64,-18)">
-      <rect x="-23" y="-17" width="46" height="36" rx="11" fill="#0d0a26" stroke="#C4B5FD" stroke-width="2"/>
-      <circle cx="-9" cy="-2" r="4.2" fill="#22D3EE"/><circle cx="9" cy="-2" r="4.2" fill="#22D3EE"/>
-      <path d="M-8,9 L8,9" stroke="#8B7FD4" stroke-width="2.2" stroke-linecap="round"/>
-      <path d="M0,-17 L0,-27" stroke="#C4B5FD" stroke-width="2"/><circle cx="0" cy="-30" r="3.4" fill="#22D3EE"/>
+  <!-- AGENT + two requests -->
+  <g transform="translate(20,320)">
+    <rect x="0" y="-104" width="132" height="208" rx="22" fill="#130f33" stroke="#8B5CF6" stroke-width="1.8"/>
+    <rect x="0" y="-104" width="132" height="208" rx="22" fill="url(#nodeGloss)"/>
+    <text x="66" y="-78" text-anchor="middle" font-size="15" font-weight="bold" fill="#EDE9FE">AI AGENT</text>
+    <text x="66" y="-60" text-anchor="middle" font-size="10.5" fill="#7E86BB">proposes actions</text>
+    <g transform="translate(12,-34)">
+      <rect x="0" y="0" width="108" height="34" rx="10" fill="#0d2a1f" stroke="#34D399" stroke-width="1.3"/>
+      <circle cx="17" cy="17" r="6" fill="none" stroke="#34D399" stroke-width="1.8"/><path d="M14,17 L16.5,19.6 L20.5,14.6" stroke="#34D399" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <text x="32" y="21" font-size="11" fill="#A7F3D0">deploy fix</text>
     </g>
-    <text x="64" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#EDE9FE">AI AGENT</text>
-    <text x="64" y="45" text-anchor="middle" font-size="11" fill="#7E86BB">wants to act</text>
+    <g transform="translate(12,16)">
+      <rect x="0" y="0" width="108" height="34" rx="10" fill="#2b1022" stroke="#F43F5E" stroke-width="1.3"/>
+      <g stroke="#F43F5E" stroke-width="1.9" stroke-linecap="round"><path d="M13,13 L21,21"/><path d="M21,13 L13,21"/></g>
+      <text x="32" y="21" font-size="11" fill="#FBB6CE">DROP TABLE</text>
+    </g>
   </g>
-  <path d="M166,320 L192,320" stroke="#8B5CF6" stroke-width="2.2" stroke-dasharray="5 6"/>
-  <path d="M188,315 L197,320 L188,325 Z" fill="#A78BFA"/>
 
-  <!-- GATE PANEL -->
-  <rect x="200" y="140" width="244" height="360" rx="22" fill="#0b0922" stroke="#3B2E7E" stroke-width="1.4"/>
-  <text x="322" y="172" text-anchor="middle" font-size="11.5" fill="#8B7FD4" letter-spacing="2.6">DOCTRINE GATES</text>
+  <!-- SAFE PATH (green, passes all 4) -->
+  <g fill="none" stroke="#34D399" stroke-width="2.4">
+    <path d="M152,300 L176,300"/><path d="M250,300 L268,300"/><path d="M342,300 L360,300"/><path d="M434,300 L452,300"/><path d="M526,300 L560,300"/>
+  </g>
+  <g fill="#34D399">
+    <path d="M170,295 L179,300 L170,305 Z"/><path d="M262,295 L271,300 L262,305 Z"/><path d="M354,295 L363,300 L354,305 Z"/><path d="M446,295 L455,300 L446,305 Z"/><path d="M556,295 L565,300 L556,305 Z"/>
+  </g>
+
+  <!-- BLOCKED PATH (red, stopped at gate 01) -->
+  <path d="M152,352 L172,352" stroke="#F43F5E" stroke-width="2.4" stroke-dasharray="6 5"/>
+  <g transform="translate(186,352)">
+    <circle r="14" fill="#2b1022" stroke="#F43F5E" stroke-width="2.2"/>
+    <path d="M-5.5,-5.5 L5.5,5.5 M5.5,-5.5 L-5.5,5.5" stroke="#F43F5E" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+  <text x="212" y="356" font-size="11.5" fill="#F9A8D4">halted at 01</text>
+  <text x="212" y="372" font-size="10" fill="#9E5C74">no human approval</text>
+
   
-    <g transform="translate(216,200)">
-      <rect x="0" y="-19" width="212" height="40" rx="12" fill="#171242" stroke="#6D5BC4" stroke-width="1.2"/>
-      <circle cx="24" cy="1" r="10" fill="none" stroke="#34D399" stroke-width="2"/>
-      <path d="M19,1 L22.5,5.2 L29.5,-3" stroke="#34D399" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="46" y="6" font-size="13" fill="#DCD6F8">Human validates</text>
-    </g>
-    <g transform="translate(216,258)">
-      <rect x="0" y="-19" width="212" height="40" rx="12" fill="#171242" stroke="#6D5BC4" stroke-width="1.2"/>
-      <circle cx="24" cy="1" r="10" fill="none" stroke="#34D399" stroke-width="2"/>
-      <path d="M19,1 L22.5,5.2 L29.5,-3" stroke="#34D399" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="46" y="6" font-size="13" fill="#DCD6F8">Backup exists</text>
-    </g>
-    <g transform="translate(216,316)">
-      <rect x="0" y="-19" width="212" height="40" rx="12" fill="#171242" stroke="#6D5BC4" stroke-width="1.2"/>
-      <circle cx="24" cy="1" r="10" fill="none" stroke="#34D399" stroke-width="2"/>
-      <path d="M19,1 L22.5,5.2 L29.5,-3" stroke="#34D399" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="46" y="6" font-size="13" fill="#DCD6F8">Sandbox passed</text>
-    </g>
-    <g transform="translate(216,374)">
-      <rect x="0" y="-19" width="212" height="40" rx="12" fill="#171242" stroke="#6D5BC4" stroke-width="1.2"/>
-      <circle cx="24" cy="1" r="10" fill="none" stroke="#34D399" stroke-width="2"/>
-      <path d="M19,1 L22.5,5.2 L29.5,-3" stroke="#34D399" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="46" y="6" font-size="13" fill="#DCD6F8">State verified</text>
-    </g>
-    <g transform="translate(216,448)">
-      <rect x="0" y="-19" width="212" height="40" rx="12" fill="#2b1022" stroke="#B4436A" stroke-width="1.3"/>
-      <g stroke="#F43F5E" stroke-width="2.4" stroke-linecap="round"><path d="M18,-5 L30,7"/><path d="M30,-5 L18,7"/></g>
-      <text x="46" y="6" font-size="13" fill="#FBB6CE">Blast radius too wide</text>
-    </g>
-
-  <!-- PASS -->
-  <path d="M444,286 L512,286" stroke="#34D399" stroke-width="2.4"/>
-  <path d="M506,281 L515,286 L506,291 Z" fill="#34D399"/>
-  <text x="478" y="275" text-anchor="middle" font-size="11" fill="#5FCFA4">pass</text>
+  <g transform="translate(176,320)">
+    <rect x="0" y="-90" width="74" height="180" rx="18" fill="#140f38" stroke="#5B47A8" stroke-width="1.4"/>
+    <rect x="0" y="-90" width="74" height="180" rx="18" fill="url(#nodeGloss)"/>
+    <text x="37" y="-64" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#6D5BC4" font-family="DejaVu Sans">01</text>
+    <g transform="translate(37,-14)"><circle cx="0" cy="0" r="11" fill="none" stroke="#A78BFA" stroke-width="2"/><circle cx="0" cy="-3.5" r="3.6" fill="#A78BFA"/><path d="M-6,7 A7,7 0 0 1 6,7" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round"/></g>
+    <text x="37" y="36" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#C4B5FD" font-family="DejaVu Sans" letter-spacing="0.6">VALIDATE</text>
+    <rect x="14" y="52" width="46" height="3" rx="1.5" fill="#34D399" opacity="0.75"/>
+  </g>
+  <g transform="translate(268,320)">
+    <rect x="0" y="-90" width="74" height="180" rx="18" fill="#140f38" stroke="#5B47A8" stroke-width="1.4"/>
+    <rect x="0" y="-90" width="74" height="180" rx="18" fill="url(#nodeGloss)"/>
+    <text x="37" y="-64" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#6D5BC4" font-family="DejaVu Sans">02</text>
+    <g transform="translate(37,-14)"><path d="M-10,-8 L10,-8 L10,8 L-10,8 Z" fill="none" stroke="#A78BFA" stroke-width="2" rx="2"/><path d="M-10,-3 L10,-3" stroke="#A78BFA" stroke-width="1.6"/><circle cx="0" cy="3" r="2.6" fill="#A78BFA"/></g>
+    <text x="37" y="36" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#C4B5FD" font-family="DejaVu Sans" letter-spacing="0.6">BACKUP</text>
+    <rect x="14" y="52" width="46" height="3" rx="1.5" fill="#34D399" opacity="0.75"/>
+  </g>
+  <g transform="translate(360,320)">
+    <rect x="0" y="-90" width="74" height="180" rx="18" fill="#140f38" stroke="#5B47A8" stroke-width="1.4"/>
+    <rect x="0" y="-90" width="74" height="180" rx="18" fill="url(#nodeGloss)"/>
+    <text x="37" y="-64" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#6D5BC4" font-family="DejaVu Sans">03</text>
+    <g transform="translate(37,-14)"><rect x="-10" y="-10" width="20" height="20" rx="4" fill="none" stroke="#A78BFA" stroke-width="2" stroke-dasharray="4 3"/><circle cx="0" cy="0" r="3.4" fill="#A78BFA"/></g>
+    <text x="37" y="36" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#C4B5FD" font-family="DejaVu Sans" letter-spacing="0.6">SANDBOX</text>
+    <rect x="14" y="52" width="46" height="3" rx="1.5" fill="#34D399" opacity="0.75"/>
+  </g>
+  <g transform="translate(452,320)">
+    <rect x="0" y="-90" width="74" height="180" rx="18" fill="#140f38" stroke="#5B47A8" stroke-width="1.4"/>
+    <rect x="0" y="-90" width="74" height="180" rx="18" fill="url(#nodeGloss)"/>
+    <text x="37" y="-64" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#6D5BC4" font-family="DejaVu Sans">04</text>
+    <g transform="translate(37,-14)"><path d="M-10,0 L-3,7 L10,-8" fill="none" stroke="#A78BFA" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="37" y="36" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#C4B5FD" font-family="DejaVu Sans" letter-spacing="0.6">VERIFY</text>
+    <rect x="14" y="52" width="46" height="3" rx="1.5" fill="#34D399" opacity="0.75"/>
+  </g>
 
   <!-- PRODUCTION -->
-  <g transform="translate(516,286)">
-    <rect x="0" y="-58" width="132" height="116" rx="18" fill="#06231b" stroke="#34D399" stroke-width="1.8"/>
-    <rect x="0" y="-58" width="132" height="116" rx="18" fill="url(#nodeGloss)"/>
-    <g transform="translate(66,-18)">
-      <ellipse cx="0" cy="-11" rx="24" ry="8" fill="none" stroke="#6EE7B7" stroke-width="2.2"/>
-      <path d="M-24,-11 L-24,11 A24,8 0 0 0 24,11 L24,-11" fill="none" stroke="#6EE7B7" stroke-width="2.2"/>
-      <ellipse cx="0" cy="0" rx="24" ry="8" fill="none" stroke="#6EE7B7" stroke-width="1.4" opacity="0.55"/>
+  <g transform="translate(560,320)">
+    <rect x="0" y="-90" width="118" height="180" rx="20" fill="#06231b" stroke="#34D399" stroke-width="1.8"/>
+    <rect x="0" y="-90" width="118" height="180" rx="20" fill="url(#nodeGloss)"/>
+    <g transform="translate(59,-34)">
+      <ellipse cx="0" cy="-12" rx="24" ry="8" fill="none" stroke="#6EE7B7" stroke-width="2.2"/>
+      <path d="M-24,-12 L-24,10 A24,8 0 0 0 24,10 L24,-12" fill="none" stroke="#6EE7B7" stroke-width="2.2"/>
+      <ellipse cx="0" cy="-1" rx="24" ry="8" fill="none" stroke="#6EE7B7" stroke-width="1.3" opacity="0.55"/>
     </g>
-    <text x="66" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#D1FAE5">PRODUCTION</text>
-    <text x="66" y="46" text-anchor="middle" font-size="11" fill="#5A9E85">intact</text>
+    <text x="59" y="34" text-anchor="middle" font-size="15" font-weight="bold" fill="#D1FAE5">PRODUCTION</text>
+    <text x="59" y="54" text-anchor="middle" font-size="11" fill="#5A9E85">1 of 2 shipped</text>
   </g>
-
-  <!-- HALTED -->
-  <path d="M444,448 L520,448" stroke="#F43F5E" stroke-width="2.2" stroke-dasharray="6 6"/>
-  <g transform="translate(538,448)">
-    <circle r="15" fill="#2b1022" stroke="#F43F5E" stroke-width="2.2"/>
-    <path d="M-6,-6 L6,6 M6,-6 L-6,6" stroke="#F43F5E" stroke-width="2.6" stroke-linecap="round"/>
-  </g>
-  <text x="538" y="482" text-anchor="middle" font-size="11" fill="#E4708F">halted</text>
 </g>
-
 <g transform="translate(720,168)">
   <rect x="0" y="-26" width="74" height="36" rx="18" fill="url(#neon)" opacity="0.22" filter="url(#bS)"/>
   <rect x="0" y="-26" width="74" height="36" rx="18" fill="none" stroke="url(#neon)" stroke-width="2"/>
@@ -185,10 +191,21 @@
 </g>
 <rect x="720" y="384" width="128" height="5" rx="2.5" fill="url(#neon)"/>
 <g font-family="DejaVu Sans">
-  <text x="720" y="434" font-size="24" fill="#DDD6FE">Stop your AI agent from</text>
-  <text x="720" y="466" font-size="24" fill="#DDD6FE">breaking production at 3 a.m.</text>
+  <text x="720" y="434" font-size="24" fill="#DDD6FE">Every action passes the gates,</text>
+  <text x="720" y="466" font-size="24" fill="#DDD6FE">or it never reaches production.</text>
   <text x="720" y="510" font-size="16.5" fill="#8B93C7">8 doctrines &#183; 3 real post-mortems &#183; zero deps</text>
 </g>
 <g font-family="DejaVu Sans"><rect x="720" y="540" width="3" height="18" rx="1.5" fill="#7C5CFF"/><text x="736" y="554" font-size="14.5" fill="#8B93C7">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
+
+<g font-family="DejaVu Sans">
+  <text x="20" y="176" font-size="11.5" fill="#8B7FD4" letter-spacing="3">THE DOCTRINE PIPELINE</text>
+  <rect x="20" y="186" width="658" height="1" fill="#3B2E7E" opacity="0.7"/>
+  <g transform="translate(20,486)">
+    <rect x="0" y="-15" width="14" height="4" rx="2" fill="#34D399"/>
+    <text x="24" y="-11" font-size="11.5" fill="#8FB9A6">passed every gate &#8212; shipped</text>
+    <rect x="248" y="-15" width="14" height="4" rx="2" fill="#F43F5E"/>
+    <text x="272" y="-11" font-size="11.5" fill="#C4869B">stopped at a gate &#8212; never reached prod</text>
+  </g>
+</g>
 <rect x="1" y="1" width="1278" height="638" fill="none" stroke="#7C5CFF" stroke-opacity="0.18" stroke-width="2"/>
 </svg>
